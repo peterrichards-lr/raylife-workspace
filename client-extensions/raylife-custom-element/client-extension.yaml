@@ -1,0 +1,15 @@
+assemble:
+    - from: build/static
+      into: static
+raylife-custom-element:
+    cssURLs:
+        - "**/*.css"
+    friendlyURLMapping: raylife-custom-element
+    htmlElementName: raylife-custom-element
+    instanceable: true
+    name: Raylife Custom Element
+    portletCategoryName: category.client-extensions
+    type: customElement
+    urls:
+        - "**/*.js"
+    useESM: true

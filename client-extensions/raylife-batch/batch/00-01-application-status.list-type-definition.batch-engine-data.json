@@ -1,0 +1,72 @@
+{
+  "configuration": {
+    "className": "com.liferay.headless.admin.list.type.dto.v1_0.ListTypeDefinition",
+    "parameters": {
+      "containsHeaders": "true",
+      "createStrategy": "UPSERT",
+      "onErrorFail": "false",
+      "updateStrategy": "UPDATE"
+    },
+    "taskItemDelegateName": "DEFAULT"
+  },
+  "items": [
+   {
+      "externalReferenceCode": "APPLICATIONSTATUS",
+      "name": "ApplicationStatus",
+      "name_i18n": {
+         "en-US": "ApplicationStatus"
+      },
+      "listTypeEntries": [
+         {
+            "key": "bound",
+            "name": "Bound",
+            "name_i18n": {
+               "en-US": "Bound"
+            }
+         },
+         {
+            "key": "incomplete",
+            "name": "Incomplete",
+            "name_i18n": {
+               "en-US": "Incomplete"
+            }
+         },
+         {
+            "key": "rejected",
+            "name": "Rejected",
+            "name_i18n": {
+               "en-US": "Rejected"
+            }
+         },
+         {
+            "key": "quoted",
+            "name": "Quoted",
+            "name_i18n": {
+               "en-US": "Quoted"
+            }
+         },
+         {
+            "key": "open",
+            "name": "Open",
+            "name_i18n": {
+               "en-US": "Open"
+            }
+         },
+         {
+            "key": "reviewed",
+            "name": "Reviewed",
+            "name_i18n": {
+               "en-US": "Reviewed"
+            }
+         },
+         {
+            "key": "underwriting",
+            "name": "Underwriting",
+            "name_i18n": {
+               "en-US": "Underwriting"
+            }
+         }
+      ]
+   }
+  ]
+}

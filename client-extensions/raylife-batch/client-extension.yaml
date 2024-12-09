@@ -1,0 +1,16 @@
+assemble:
+    - from: batch
+      into: batch
+raylife-batch:
+    name: Liferay Pillar Batch
+    oAuthApplicationHeadlessServer: raylife-batch-oauth-application-headless-server
+    type: batch
+raylife-batch-oauth-application-headless-server:
+    .serviceAddress: localhost:8080
+    .serviceScheme: http
+    name: Raylife Batch OAuth Application Headless Server
+    scopes:
+        - Liferay.Headless.Batch.Engine.everything
+        - Liferay.Object.Admin.REST.everything
+        - Liferay.Headless.Admin.User.everything
+    type: oAuthApplicationHeadlessServer

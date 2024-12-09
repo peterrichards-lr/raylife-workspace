@@ -1,0 +1,25 @@
+{
+	"configuration": {
+		"className": "com.liferay.object.admin.rest.dto.v1_0.ObjectRelationship",
+		"parameters": {
+			"containsHeaders": "true",
+			"createStrategy": "INSERT",
+			"externalReferenceCode": "L_ACCOUNT",
+			"onErrorFail": "false",
+			"updateStrategy": "UPDATE"
+		},
+		"taskItemDelegateName": "DEFAULT"
+	},
+	"items": [
+      {
+         "deletionType": "prevent",
+         "label": {
+            "en_US": "Account"
+         },
+         "name": "accountToApplications",
+         "objectDefinitionExternalReferenceCode1": "L_ACCOUNT",
+         "objectDefinitionExternalReferenceCode2": "RAYLIFEAPPLICATION",
+         "type": "oneToMany"
+      }
+   ]
+}

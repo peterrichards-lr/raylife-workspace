@@ -1,0 +1,87 @@
+{
+  "configuration": {
+    "className": "com.liferay.object.admin.rest.dto.v1_0.ObjectDefinition",
+    "parameters": {
+      "containsHeaders": "true",
+      "createStrategy": "UPSERT",
+      "onErrorFail": "false",
+      "updateStrategy": "UPDATE"
+    },
+    "taskItemDelegateName": "DEFAULT"
+  },
+  "items": [
+    {
+      "externalReferenceCode": "RAYLIFEQUOTE",
+      "label": {
+        "en_US": "Raylife Quote"
+      },
+      "name": "RaylifeQuote",
+      "objectFields": [
+        {
+          "DBType": "String",
+          "businessType": "Picklist",
+          "indexed": true,
+          "indexedAsKeyword": false,
+          "indexedLanguageId": "en_US",
+          "label": {
+            "en_US": "Billing Option"
+          },
+          "listTypeDefinitionExternalReferenceCode": "BILLINGOPTION",
+          "name": "billingOption",
+          "required": false,
+          "type": "String"
+        },
+        {
+          "DBType": "Clob",
+          "businessType": "LongText",
+          "indexed": true,
+          "indexedAsKeyword": false,
+          "indexedLanguageId": "",
+          "label": {
+            "en_US": "Data JSON"
+          },
+          "name": "dataJSON",
+          "required": false,
+          "type": "Clob"
+        },
+        {
+          "DBType": "Date",
+          "businessType": "Date",
+          "indexed": true,
+          "indexedAsKeyword": false,
+          "label": {
+            "en_US": "Quote Create Date"
+          },
+          "name": "quoteCreateDate",
+          "required": false,
+          "type": "Date"
+        },
+        {
+          "DBType": "String",
+          "businessType": "Picklist",
+          "indexed": true,
+          "indexedAsKeyword": false,
+          "indexedLanguageId": "en_US",
+          "label": {
+            "en_US": "Policy Term"
+          },
+          "listTypeDefinitionExternalReferenceCode": "POLICYTERM",
+          "name": "policyTerm",
+          "required": false,
+          "type": "String"
+        }
+      ],
+      "panelAppOrder": "100",
+      "panelCategoryKey": "control_panel.object",
+      "pluralLabel": {
+        "en_US": "Raylife Quotes"
+      },
+      "scope": "company",
+      "status": {
+        "label_i18n": "Approved",
+        "code": 0,
+        "label": "approved"
+      }
+    }
+  ]
+}

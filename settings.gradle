@@ -1,0 +1,18 @@
+buildscript {
+	dependencies {
+		classpath group: "com.github.docker-java", name: "docker-java-core", version: "3.3.1"
+		classpath group: "com.github.docker-java", name: "docker-java", version: "3.3.1"
+		classpath group: "com.github.docker-java", name: "docker-java-transport-httpclient5", version: "3.3.1"
+		classpath group: "com.liferay", name: "com.liferay.gradle.plugins.workspace", version: "10.1.7"
+	}
+
+	repositories {
+		mavenLocal()
+
+		maven {
+			url "https://repository-cdn.liferay.com/nexus/content/groups/public"
+		}
+	}
+}
+
+apply plugin: "com.liferay.workspace"

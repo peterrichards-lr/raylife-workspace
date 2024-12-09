@@ -1,0 +1,25 @@
+{
+	"configuration": {
+		"className": "com.liferay.object.admin.rest.dto.v1_0.ObjectRelationship",
+		"parameters": {
+			"containsHeaders": "true",
+			"createStrategy": "INSERT",
+			"externalReferenceCode": "L_USER",
+			"onErrorFail": "false",
+			"updateStrategy": "UPDATE"
+		},
+		"taskItemDelegateName": "DEFAULT"
+	},
+	"items": [
+      {
+         "deletionType": "prevent",
+         "label": {
+            "en_US": "User"
+         },
+         "name": "userToQuotes",
+         "objectDefinitionExternalReferenceCode1": "L_USER",
+         "objectDefinitionExternalReferenceCode2": "RAYLIFEQUOTE",
+         "type": "oneToMany"
+      }
+   ]
+}

@@ -1,0 +1,25 @@
+{
+   "configuration": {
+     "className": "com.liferay.object.admin.rest.dto.v1_0.ObjectDefinition",
+     "parameters": {
+       "containsHeaders": "true",
+       "createStrategy": "UPSERT",
+       "onErrorFail": "false",
+       "updateStrategy": "UPDATE"
+     },
+     "taskItemDelegateName": "DEFAULT"
+   },
+   "items": [
+      {
+         "externalReferenceCode": "RAYLIFEAPPLICATION",
+         "label": {
+            "en_US": "Raylife Application"
+         },
+         "name": "RaylifeApplication",
+         "pluralLabel": {
+            "en_US": "Raylife Applications"
+         },
+         "scope": "company"
+      }
+   ]
+}

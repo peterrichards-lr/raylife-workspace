@@ -1,0 +1,26 @@
+{
+  "configuration": {
+    "className": "com.liferay.object.admin.rest.dto.v1_0.ObjectDefinition",
+    "parameters": {
+      "containsHeaders": "true",
+      "createStrategy": "UPSERT",
+      "onErrorFail": "false",
+      "updateStrategy": "UPDATE"
+    },
+    "taskItemDelegateName": "DEFAULT"
+  },
+  "items": [
+    {
+      "externalReferenceCode": "RAYLIFEQUOTE",
+      "label": {
+        "en_US": "Raylife Quote"
+      },
+      "name": "RaylifeQuote",
+      "pluralLabel": {
+        "en_US": "Raylife Quotes"
+      },
+      "portlet": false,
+      "scope": "company"
+    }
+  ]
+}

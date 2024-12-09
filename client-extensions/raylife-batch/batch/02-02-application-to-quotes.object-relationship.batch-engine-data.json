@@ -1,0 +1,25 @@
+{
+	"configuration": {
+		"className": "com.liferay.object.admin.rest.dto.v1_0.ObjectRelationship",
+		"parameters": {
+			"containsHeaders": "true",
+			"createStrategy": "INSERT",
+			"externalReferenceCode": "RAYLIFEAPPLICATION",
+			"onErrorFail": "false",
+			"updateStrategy": "UPDATE"
+		},
+		"taskItemDelegateName": "DEFAULT"
+	},
+	"items": [
+      {
+         "deletionType": "prevent",
+         "label": {
+            "en_US": "Account"
+         },
+         "name": "applicationToQuotes",
+         "objectDefinitionExternalReferenceCode1": "RAYLIFEAPPLICATION",
+         "objectDefinitionExternalReferenceCode2": "RAYLIFEQUOTE",
+         "type": "oneToMany"
+      }
+   ]
+}
