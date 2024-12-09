@@ -8,6 +8,7 @@ import '../../../types';
 import {allowedProductQuote} from '../../../routes/get-a-quote/utils/webContents';
 import {toSlug} from '../../utils';
 import {axios} from './api';
+import i18next from './i18n'
 
 const headlessAPI = 'o/headless-commerce-delivery-catalog/v1.0';
 
@@ -174,7 +175,7 @@ const adaptToProductQuote = async (channelId, items = []) => {
 			id: productId,
 			period: `($${_formatCommerceProductPrice(
 				promoPrice
-			)}-${_formatCommerceProductPrice(price)}/mo)`,
+			)}-${_formatCommerceProductPrice(price)}${i18next.t('per-month')})`,
 			template: {
 				allowed: allowedProductQuote(name),
 				name: toSlug(name),

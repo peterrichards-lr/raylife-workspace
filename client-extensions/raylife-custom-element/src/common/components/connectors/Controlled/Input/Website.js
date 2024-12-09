@@ -5,10 +5,13 @@
 
 import React from 'react';
 import {ControlledInput} from '.';
+import {useTranslation} from 'react-i18next';
 
 import {WEBSITE_REGEX} from '../../../../utils/patterns';
 
 export function WebsiteControlledInput({rules, ...props}) {
+	const {t} = useTranslation();
+
 	return (
 		<ControlledInput
 			{...props}
@@ -17,7 +20,7 @@ export function WebsiteControlledInput({rules, ...props}) {
 			}}
 			rules={{
 				pattern: {
-					message: 'Should be a valid website address.',
+					message: t('website-validation'),
 					value: WEBSITE_REGEX,
 				},
 				...rules,

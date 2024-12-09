@@ -5,10 +5,13 @@
 
 import React from 'react';
 import {ControlledInputWithMask} from '.';
+import {useTranslation} from 'react-i18next';
 
 import {ZIP_REGEX} from '../../../../../utils/patterns';
 
 export function ZIPControlledInput({rules = {}, inputProps = {}, ...props}) {
+	const {t} = useTranslation();
+
 	return (
 		<ControlledInputWithMask
 			{...props}
@@ -20,7 +23,7 @@ export function ZIPControlledInput({rules = {}, inputProps = {}, ...props}) {
 			}}
 			rules={{
 				pattern: {
-					message: 'Must be a five digit number.',
+					message: t('zip-validation'),
 					value: ZIP_REGEX,
 				},
 				...rules,

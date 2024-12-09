@@ -5,6 +5,7 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './i18n';
 
 import ClayIconProvider from './common/context/ClayIconProvider';
 import {GoogleMapsService} from './common/services/google-maps';

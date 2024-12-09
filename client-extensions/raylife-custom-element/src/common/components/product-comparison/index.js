@@ -7,6 +7,8 @@ import ClayButton from '@clayui/button';
 import ClayIcon from '@clayui/icon';
 import classNames from 'classnames';
 
+import {useTranslation} from 'react-i18next';
+
 const currencyIntl = new Intl.NumberFormat('en-US', {
 	currency: 'USD',
 });
@@ -32,25 +34,27 @@ const ListItems = ({
 	perOccuranceLimit,
 	productRecallOrReplacement,
 }) => {
+	const {t} = useTranslation();
+
 	const values = [
 		{
-			title: 'Per Occurrence Limit',
+			title: t('per-occurrence-limit'),
 			value: perOccuranceLimit,
 		},
 		{
-			title: 'Aggregate Limit',
+			title: t('aggregate-limit'),
 			value: aggregateLimit,
 		},
 		{
-			title: 'Business Personal Property',
+			title: t('business-personal-property'),
 			value: businessPersonalProperty,
 		},
 		{
-			title: 'Product Recall or Replacement',
+			title: t('product-recall-or-replacement'),
 			value: productRecallOrReplacement,
 		},
 		{
-			title: 'Money & Securities',
+			title: t('money-and-securities'),
 			value: moneyAndSecurities || false,
 		},
 	];
@@ -101,13 +105,15 @@ const ListItems = ({
 };
 
 const ProductComparison = ({
-	highlightMostPopularText = 'Most Popular',
+	highlightMostPopularText = undefined,
 	isMobileDevice = false,
 	onClickPolicyDetails,
 	onClickPurchase,
 	product,
 	purchasable = true,
 }) => {
+	highlightMostPopularText = highlightMostPopularText === undefined ? t('most-popular') : highlightMostPopularText;
+
 	const {category, mostPopular, price, promo, ...productDetails} = JSON.parse(
 		product.dataJSON
 	);
@@ -157,7 +163,7 @@ const ProductComparison = ({
 					</div>
 
 					<div className="font-weight-normal m-auto mt-1 quote-subtitle text-neutral-8 text-paragraph-xs">
-						<span>Minimum payment of </span>
+						<span>t('minimum-payment-of') </span>
 						<></>
 						<span className="text-brand-primary">
 							&#36;
@@ -165,7 +171,7 @@ const ProductComparison = ({
 								? promoPrice
 								: promoPrice.toFixed(2)}{' '}
 						</span>{' '}
-						to get coverage today
+						t('to-get-coverage-today')
 					</div>
 				</div>
 
@@ -193,7 +199,7 @@ const ProductComparison = ({
 								id="purchase"
 								onClick={() => onClickPurchase(product)}
 							>
-								PURCHASE THIS POLICY
+								t('purchase-this-policy')
 							</ClayButton>
 						</div>
 					)}
@@ -205,7 +211,7 @@ const ProductComparison = ({
 							id="details"
 							onClick={onClickPolicyDetails}
 						>
-							<u>Policy Details</u>
+							<u>t('policy-details')</u>
 						</ClayButton>
 					</div>
 				</div>

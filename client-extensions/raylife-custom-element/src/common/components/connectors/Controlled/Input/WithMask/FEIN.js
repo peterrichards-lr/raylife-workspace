@@ -5,17 +5,20 @@
 
 import React from 'react';
 import {ControlledInputWithMask} from '.';
+import {useTranslation} from 'react-i18next';
 
 import {FEIN_REGEX} from '../../../../../utils/patterns';
 
 export function FEINControlledInput({rules = {}, inputProps = {}, ...props}) {
+	const {t} = useTranslation();
+
 	return (
 		<ControlledInputWithMask
 			{...props}
 			inputProps={{format: '##-#######', mask: '_', ...inputProps}}
 			rules={{
 				pattern: {
-					message: 'Please enter a valid FEIN.',
+					message: t('fein-validation'),
 					value: FEIN_REGEX,
 				},
 				...rules,

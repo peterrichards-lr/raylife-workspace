@@ -6,10 +6,12 @@
 import React from 'react';
 import {ControlledSelect} from '.';
 import {STATE_REGEX} from '../../../../../common/utils/patterns';
+import {useTranslation} from 'react-i18next';
 
 import {useLocation} from '../../../../../routes/get-a-quote/hooks/useLocation';
 
 export function StatesControlledSelect({rules, ...props}) {
+	const {t} = useTranslation();
 	const {states} = useLocation();
 
 	return (
@@ -18,7 +20,7 @@ export function StatesControlledSelect({rules, ...props}) {
 			defaultValue="AL"
 			rules={{
 				pattern: {
-					message: 'Should be a two letter word.',
+					message: t('state-validation'),
 					value: STATE_REGEX,
 				},
 				...rules,

@@ -1,0 +1,27 @@
+{
+   "translation": {
+      "fein-validation": "Please enter a valid FEIN.",
+      "phone-validation": "Must be a valid phone number.",
+      "future-year-validation": "You cannot enter a future year.",
+      "year-validation": "Must be a valid year.",
+      "zip-validation": "Must be a five digit number.",
+      "email-validation": "Must be a valid email address.",
+      "website-validation": "Should be a valid website address.",
+      "state-validation": "Should be a two letter word.",
+      "more-info-label": "More Info",
+      "yes": "Yes",
+      "no": "No",
+      "per-occurrence-limit": "Per Occurrence Limit",
+      "aggregate-limit": "Aggregate Limit",
+      "business-personal-property": "Business Personal Property",
+      "product-recall-or-replacement": "Product Recall or Replacement",
+      "money-and-securities": "Money & Securities",
+      "most-popular": "Most Popular",
+      "minimum-payment-of": "Minimum payment of",
+      "to-get-coverage-today": "to get coverage today",
+      "purchase-this-policy": "PURCHASE THIS POLICY",
+      "policy-details": "Policy Details",
+      "per-month": "/mo",
+      "changes-may-not-be-saved-warning": "Changes you made may not be saved."
+   }
+}

@@ -15,3 +15,5 @@ export const RAYLIFE_PAGES = {
 	HOME: '',
 	SELECTED_QUOTE: 'selected-quote',
 };
+
+export const APPLICATION_FOLDER_NAME = 'Quote Application'; 

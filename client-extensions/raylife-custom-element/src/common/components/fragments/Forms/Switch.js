@@ -6,6 +6,7 @@
 import ClayButton from '@clayui/button';
 import classNames from 'classnames';
 import React from 'react';
+import {useTranslation} from 'react-i18next';
 
 import {InputAreaWithError} from './InputArea/WithError';
 import {Label} from './Label';
@@ -24,6 +25,8 @@ export const Switch = React.forwardRef(
 		},
 		ref
 	) => {
+		const {t} = useTranslation();
+
 		return (
 			<InputAreaWithError error={error}>
 				{label && (
@@ -44,7 +47,7 @@ export const Switch = React.forwardRef(
 						onClick={() => onChange('true')}
 						type="button"
 					>
-						Yes
+						t('yes')
 					</ClayButton>
 
 					<ClayButton
@@ -58,7 +61,7 @@ export const Switch = React.forwardRef(
 						onClick={() => onChange('false')}
 						type="button"
 					>
-						No
+						t('no')
 					</ClayButton>
 				</div>
 

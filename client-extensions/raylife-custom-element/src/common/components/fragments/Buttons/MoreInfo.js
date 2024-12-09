@@ -8,14 +8,18 @@ import ClayLabel from '@clayui/label';
 import classNames from 'classnames';
 import React, {useContext} from 'react';
 import {WebContentContext} from '../../../../routes/get-a-quote/context/WebContentProvider';
+import {useTranslation} from 'react-i18next';
 
 export function MoreInfoButton({
 	callback,
 	event,
-	label = 'More Info',
+	label = undefined,
 	selected,
 	value,
 }) {
+	const {t} = useTranslation();
+	label = label === undefined ? t('more-info-label') : label;
+
 	const [, dispatchEvent] = useContext(WebContentContext);
 
 	const updateState = () => {

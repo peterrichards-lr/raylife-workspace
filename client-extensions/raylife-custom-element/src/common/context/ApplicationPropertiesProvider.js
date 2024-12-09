@@ -4,9 +4,10 @@
  */
 
 import {createContext} from 'react';
+import { APPLICATION_FOLDER_NAME } from '../utils/constants';
 
 const defaultProperties = {
-	applicationsfoldername: 'Quote Application',
+	applicationsfoldername: APPLICATION_FOLDER_NAME,
 	googleplaceskey: '',
 	route: '',
 };

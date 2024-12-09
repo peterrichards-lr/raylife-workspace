@@ -5,10 +5,13 @@
 
 import React from 'react';
 import {ControlledInputWithMask} from '.';
+import {useTranslation} from 'react-i18next';
 
 import {PHONE_REGEX} from '../../../../../utils/patterns';
 
 export function PhoneControlledInput({rules = {}, inputProps = {}, ...props}) {
+	const {t} = useTranslation();
+
 	return (
 		<ControlledInputWithMask
 			{...props}
@@ -21,7 +24,7 @@ export function PhoneControlledInput({rules = {}, inputProps = {}, ...props}) {
 			}}
 			rules={{
 				pattern: {
-					message: 'Must be a valid phone number.',
+					message: t('phone-validation'),
 					value: PHONE_REGEX,
 				},
 				...rules,

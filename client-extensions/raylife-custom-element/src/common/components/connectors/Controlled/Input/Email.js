@@ -5,10 +5,13 @@
 
 import React from 'react';
 import {ControlledInput} from '.';
+import {useTranslation} from 'react-i18next';
 
 import {EMAIL_REGEX} from '../../../../utils/patterns';
 
 export function EmailControlledInput({rules, ...props}) {
+	const {t} = useTranslation();
+
 	return (
 		<ControlledInput
 			{...props}
@@ -17,7 +20,7 @@ export function EmailControlledInput({rules, ...props}) {
 			}}
 			rules={{
 				pattern: {
-					message: 'Must be a valid email address.',
+					message: t('email-validation'),
 					value: EMAIL_REGEX,
 				},
 				...rules,

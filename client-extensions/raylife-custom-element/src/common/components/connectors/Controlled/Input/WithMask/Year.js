@@ -5,10 +5,13 @@
 
 import React from 'react';
 import {ControlledInputWithMask} from '.';
+import {useTranslation} from 'react-i18next';
 
 import {YEAR_REGEX} from '../../../../../utils/patterns';
 
 export function YearControlledInput({rules = {}, inputProps = {}, ...props}) {
+	const {t} = useTranslation();
+
 	return (
 		<ControlledInputWithMask
 			{...props}
@@ -20,11 +23,11 @@ export function YearControlledInput({rules = {}, inputProps = {}, ...props}) {
 			}}
 			rules={{
 				max: {
-					message: 'You cannot enter a future year.',
+					message: t('future-year-validation'),
 					value: new Date().getFullYear(),
 				},
 				pattern: {
-					message: 'Must be a valid year.',
+					message: t('year-validation'),
 					value: YEAR_REGEX,
 				},
 				...rules,
