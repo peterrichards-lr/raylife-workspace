@@ -118,6 +118,7 @@
       "limited-liability-company": "Limited Liability Company (LLC)",
       "limited-liability-partnership": "Limited Liability Partnership (LLP)",
       "partnership": "Partnership",
-      "professional-corporation": "Professional Corporation (PC)"
+      "professional-corporation": "Professional Corporation (PC)",
+      "select": "Select"
    }
 }

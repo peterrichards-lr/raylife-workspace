@@ -18,7 +18,7 @@ export function LegalEntityControlledSelect({...props}) {
 	
 	return (
 		<ControlledSelect {...props}>
-			<ClaySelect.Option hidden label="Select" />
+			<ClaySelect.Option hidden label={t('select')} />
 
 			{entities.map(({name}) => (
 				<ClaySelect.Option key={name} label={t(name)} value={name} />

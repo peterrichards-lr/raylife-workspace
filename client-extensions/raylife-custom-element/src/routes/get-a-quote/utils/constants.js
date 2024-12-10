@@ -27,7 +27,7 @@ export const SUBSECTION_KEYS = {
 	CITY: 'city',
 	DIVING_BOARDS: 'diving-boards',
 	DO_YOU_HAVE_RAYLIFE_POLICY: 'do-you-have-raylife-policy',
-	DO_YOU_OWN_THE_BUILDING_AT: 'do-you-own-the-building-at ',
+	DO_YOU_OWN_THE_BUILDING_AT: 'do-you-own-the-building-at',
 	DO_YOU_SELL_PRODUCTS_UNDER_OWN_BRAND:
 		'do-you-sell-products-under-own-brand',
 	DO_YOU_STORE_PERSONALITY_IDENTIFIABLE:

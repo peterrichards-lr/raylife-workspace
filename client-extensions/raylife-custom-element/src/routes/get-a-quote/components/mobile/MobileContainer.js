@@ -7,6 +7,8 @@ import classNames from 'classnames';
 import {useEffect} from 'react';
 import useForceValidation from '../../hooks/useForceValidation';
 
+import {useTranslation} from 'react-i18next';
+
 const MobileContainer = ({
 	activeMobileSubSection = {},
 	children,
@@ -15,6 +17,7 @@ const MobileContainer = ({
 	hasAddress = '',
 }) => {
 	const forceValidation = useForceValidation();
+	const {t} = useTranslation();
 	const {hideInputLabel, title} = mobileSubSection;
 	const visible = title === activeMobileSubSection.title;
 
@@ -37,7 +40,7 @@ const MobileContainer = ({
 	return (
 		<div className="flex flex-column">
 			<h2 className="mx-auto text-center text-dark">
-				{`${mobileSubSection.title} ${hasAddress}`}
+				{`${t(mobileSubSection.title)} ${hasAddress}`}
 			</h2>
 
 			<div
