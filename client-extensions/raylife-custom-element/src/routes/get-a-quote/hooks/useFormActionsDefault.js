@@ -165,7 +165,7 @@ const useFormActions = ({
 		}
 
 		setError('applicationObject', {
-			message: OBJECT_MESSAGE.APPLICATION.DISABLED,
+			message: t(OBJECT_MESSAGE.APPLICATION.DISABLED),
 		});
 	}, [
 		selectedStep.index,

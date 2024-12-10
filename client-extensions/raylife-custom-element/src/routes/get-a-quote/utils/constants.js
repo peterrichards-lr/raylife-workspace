@@ -17,54 +17,54 @@ export const TOTAL_OF_FIELD = {
 };
 
 export const SUBSECTION_KEYS = {
-	BUSINESS_ANUAL_GROSS_REVENUE:
-		'What is your estimated annual gross revenue for the next 12 months?',
-	BUSINESS_EMAIL: 'Business Email',
+	BUSINESS_ANNUAL_GROSS_REVENUE:
+		'business-annual-gross-revenue',
+	BUSINESS_EMAIL: 'business-email',
 	BUSINESS_FEDERAL_EMPLOYER_IDENTIFICATION_NUMBER:
-		'Does your business have a Federal Employer Identification Number (FEIN)?',
-	BUSINESS_WEBSITE: 'Business Website (optional)',
-	BUSINESS_YEAR_OPERATION: 'Does your business operate year round?',
-	CITY: 'City',
-	DIVING_BOARDS: 'Are there diving boards or slides?',
-	DO_YOU_HAVE_RAYLIFE_POLICY: 'Do you have a Raylife Auto policy?',
-	DO_YOU_OWN_THE_BUILDING_AT: 'Do you own the building at ',
+		'business-federal-employer-identification-number',
+	BUSINESS_WEBSITE: 'business-website',
+	BUSINESS_YEAR_OPERATION: 'business-year-operation',
+	CITY: 'city',
+	DIVING_BOARDS: 'diving-boards',
+	DO_YOU_HAVE_RAYLIFE_POLICY: 'do-you-have-raylife-policy',
+	DO_YOU_OWN_THE_BUILDING_AT: 'do-you-own-the-building-at ',
 	DO_YOU_SELL_PRODUCTS_UNDER_OWN_BRAND:
-		'Do you sell products under your own brand or label?',
+		'do-you-sell-products-under-own-brand',
 	DO_YOU_STORE_PERSONALITY_IDENTIFIABLE:
-		'Do you store personally identifiable information about your customers?',
-	EMPLOYEES_AMOUNT: 'How many full or part time employees do you have?',
+		'do-you-store-personality-identifiable',
+	EMPLOYEES_AMOUNT: 'employees-amount',
 	EMPLOYEES_ANNUAL_PAYROLL:
-		'What do you anticipate your annual payroll will be for all employees over the next 12 months?',
+		'employees-annual-payroll',
 	FEDERAL_EMPLOYER_IDENTIFICATION_NUMBER:
-		'Federal Employer Identification Number (FEIN)',
-	FIRST_NAME: 'First Name',
+		'federal-employer-identification-number',
+	FIRST_NAME: 'first-name',
 	HOW_MANY_SQUARE_FEET_OF_THE_BUILDING:
-		'How many square feet of the building does your business occupy?',
-	HOW_MANY_STORIES_IS_THIS_BUILDING: 'How many stories is this building?',
+		'how-many-square-feet-of-the-building',
+	HOW_MANY_STORIES_IS_THIS_BUILDING: 'how-many-stories-is-this-building',
 	HOW_MANY_TOTAL_SQUARE_FEET_IS_THE_BUILDING:
-		'How many total square feet is the building?',
-	LAST_NAME: 'Last Name',
-	LEGAL_ENTITY: 'Legal Entity',
+		'how-many-total-square-feet-is-the-building',
+	LAST_NAME: 'last-name',
+	LEGAL_ENTITY: 'legal-entity',
 	OWNERS_ANNUAL_PAYROLL:
-		'What do you anticipate your annual payroll will be for all owner(s) over the next 12 months?',
+		'owners-annual-payroll',
 	PERCENT_OF_SALES_FROM_MERCHANDISE:
-		'Percent of sales from used merchandise?',
-	PHONE: 'Phone',
-	PHYSICAL_ADDRESS: 'Physical Address',
-	PHYSICAL_BUSINESS_ADDRESS: 'Physical Business Address',
-	PREMISES: 'Premises',
+		'percent-of-sales-from-merchandise',
+	PHONE: 'phone',
+	PHYSICAL_ADDRESS: 'physical-address',
+	PHYSICAL_BUSINESS_ADDRESS: 'physical-business-address',
+	PREMISES: 'premises',
 	PRIMARY_LOCATION:
-		'Is this the primary location where you conduct business?',
-	STATE: 'State',
-	SWIMMING_POOL: 'Are there swimming pool(s) on the premises?',
+		'primary-location',
+	STATE: 'state',
+	SWIMMING_POOL: 'swimming-pool',
 	WHAT_PERCENTAGE_OF_OVERALL_INVOLVE_DELIVERY:
-		'What percentage of overall sales involve delivery?',
+		'what-percentage-of-overall-involve-delivery',
 	WHAT_YEAR_WAS_THE_BUILDING_CONSTRUCTED:
-		'What year was the building constructed?',
-	YEAR_BUSINESS_STARTED: 'What year did you start your business?',
-	YEAR_OF_INDUSTRY_EXPERIENCE: 'Years of industry experience?',
-	YOUR_NAME: 'Your Name',
-	ZIP: 'ZIP',
+		'what-year-was-the-building-constructed',
+	YEAR_BUSINESS_STARTED: 'year-business-started',
+	YEAR_OF_INDUSTRY_EXPERIENCE: 'year-of-industry-experience',
+	YOUR_NAME: 'your-name',
+	ZIP: 'zip',
 };
 
 export const AVAILABLE_STEPS = {
@@ -102,7 +102,7 @@ export const AVAILABLE_STEPS = {
 		],
 		section: 'basics',
 		subsection: 'businessInformation',
-		title: 'Just the business basics!',
+		title: 'step-basics-business-information',
 	},
 	BASICS_BUSINESS_TYPE: {
 		Component: FormBasicBusinessType,
@@ -111,7 +111,7 @@ export const AVAILABLE_STEPS = {
 		index: 1,
 		section: 'basics',
 		subsection: 'business-type',
-		title: 'Select a primary industry.',
+		title: 'step-basics-business-type',
 	},
 	BASICS_PRODUCT_QUOTE: {
 		Component: FormBasicProductQuote,
@@ -120,7 +120,7 @@ export const AVAILABLE_STEPS = {
 		index: 0,
 		section: 'basics',
 		subsection: 'product-quote',
-		title: 'Welcome! Select a product.',
+		title: 'step-basics-product-quote',
 	},
 	BUSINESS: {
 		Component: FormBusiness,
@@ -172,7 +172,7 @@ export const AVAILABLE_STEPS = {
 		],
 		section: 'business',
 		subsection: '',
-		title: "Let's get to know your business!",
+		title: "step-business",
 	},
 	EMPLOYEES: {
 		Component: FormEmployees,
@@ -208,7 +208,7 @@ export const AVAILABLE_STEPS = {
 				active: false,
 				hideContinueButton: false,
 				hideInputLabel: true,
-				title: SUBSECTION_KEYS.BUSINESS_ANUAL_GROSS_REVENUE,
+				title: SUBSECTION_KEYS.BUSINESS_ANNUAL_GROSS_REVENUE,
 			},
 			{
 				active: false,
@@ -225,7 +225,7 @@ export const AVAILABLE_STEPS = {
 		],
 		section: 'employees',
 		subsection: '',
-		title: 'Tell us about your employees!',
+		title: 'step-employees',
 	},
 	PROPERTY: {
 		Component: FormProperty,
@@ -278,7 +278,7 @@ export const AVAILABLE_STEPS = {
 		],
 		section: 'property',
 		subsection: '',
-		title: 'More about',
+		title: 'step-property',
 	},
 };
 
@@ -307,7 +307,7 @@ export const APPLICATION_STATUS = {
 
 export const OBJECT_MESSAGE = {
 	APPLICATION: {
-		DISABLED: 'Application object is disabled',
+		DISABLED: 'app-object-disabled',
 	},
 };
 

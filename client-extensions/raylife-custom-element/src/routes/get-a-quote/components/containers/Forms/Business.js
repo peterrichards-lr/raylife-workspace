@@ -88,7 +88,7 @@ export function FormBusiness({form}) {
 			>
 				<NumberControlledInput
 					control={control}
-					label={SUBSECTION_KEYS.YEAR_OF_INDUSTRY_EXPERIENCE}
+					label={t(SUBSECTION_KEYS.YEAR_OF_INDUSTRY_EXPERIENCE)}
 					moreInfoProps={{
 						callback: () =>
 							updateState(setFormPath('yearsOfExperience')),
@@ -120,7 +120,7 @@ export function FormBusiness({form}) {
 				<ControlledSwitch
 					control={control}
 					label={
-						SUBSECTION_KEYS.DO_YOU_STORE_PERSONALITY_IDENTIFIABLE
+						t(SUBSECTION_KEYS.DO_YOU_STORE_PERSONALITY_IDENTIFIABLE)
 					}
 					name={setFormPath('hasStoredCustomerInformation')}
 					onSelect={nextStep}
@@ -136,7 +136,7 @@ export function FormBusiness({form}) {
 			>
 				<ControlledSwitch
 					control={control}
-					label={SUBSECTION_KEYS.DO_YOU_HAVE_RAYLIFE_POLICY}
+					label={t(SUBSECTION_KEYS.DO_YOU_HAVE_RAYLIFE_POLICY)}
 					name={setFormPath('hasAutoPolicy')}
 					onSelect={nextStep}
 					rules={{required: true}}
@@ -152,7 +152,7 @@ export function FormBusiness({form}) {
 				<LegalEntityControlledSelect
 					control={control}
 					inputProps={{className: 'mb-5'}}
-					label={SUBSECTION_KEYS.LEGAL_ENTITY}
+					label={t(SUBSECTION_KEYS.LEGAL_ENTITY)}
 					name={setFormPath('legalEntity')}
 					rules={{
 						required: t('field-required'),
@@ -170,7 +170,7 @@ export function FormBusiness({form}) {
 					<PercentageControlledInput
 						control={control}
 						label={
-							SUBSECTION_KEYS.PERCENT_OF_SALES_FROM_MERCHANDISE
+							t(SUBSECTION_KEYS.PERCENT_OF_SALES_FROM_MERCHANDISE)
 						}
 						moreInfoProps={{
 							callback: () =>
@@ -208,7 +208,7 @@ export function FormBusiness({form}) {
 					<ControlledSwitch
 						control={control}
 						label={
-							SUBSECTION_KEYS.DO_YOU_SELL_PRODUCTS_UNDER_OWN_BRAND
+							t(SUBSECTION_KEYS.DO_YOU_SELL_PRODUCTS_UNDER_OWN_BRAND)
 						}
 						name={setFormPath('hasSellProductsUnderOwnBrand')}
 						onSelect={nextStep}
@@ -227,7 +227,7 @@ export function FormBusiness({form}) {
 					<PercentageControlledInput
 						control={control}
 						label={
-							SUBSECTION_KEYS.WHAT_PERCENTAGE_OF_OVERALL_INVOLVE_DELIVERY
+							t(SUBSECTION_KEYS.WHAT_PERCENTAGE_OF_OVERALL_INVOLVE_DELIVERY)
 						}
 						name={setFormPath('overallSales')}
 						rules={{

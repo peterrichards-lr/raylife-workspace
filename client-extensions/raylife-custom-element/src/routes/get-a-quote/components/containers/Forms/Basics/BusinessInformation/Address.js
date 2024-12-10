@@ -55,7 +55,7 @@ export function BusinessInformationAddress() {
 						placeholder: t('street-address'),
 						ref,
 					}}
-					label={SUBSECTION_KEYS.PHYSICAL_BUSINESS_ADDRESS}
+					label={t(SUBSECTION_KEYS.PHYSICAL_BUSINESS_ADDRESS)}
 					name={setFormPath('address')}
 					rules={{required: t('business-address-validation')}}
 				/>
@@ -75,7 +75,7 @@ export function BusinessInformationAddress() {
 						className:
 							'col-sm-8 col-md-5 col-lg-5 pr-sm-4 pr-xs-0 p-0',
 					}}
-					label={SUBSECTION_KEYS.CITY}
+					label={t(SUBSECTION_KEYS.CITY)}
 					name={setFormPath('city')}
 					rules={{required: t('city-validation')}}
 				/>
@@ -86,7 +86,7 @@ export function BusinessInformationAddress() {
 						className:
 							'col-sm-4 col-md-3 col-lg-3 pr-md-4 pr-lg-4 p-0 mt-3 mt-sm-0 mt-md-0 mt-lg-0',
 					}}
-					label={SUBSECTION_KEYS.STATE}
+					label={t(SUBSECTION_KEYS.STATE)}
 					name={setFormPath('state')}
 					rules={{
 						required: t('field-required'),
@@ -99,7 +99,7 @@ export function BusinessInformationAddress() {
 						className:
 							'col-sm-12 col-md-4 col-lg-4 mt-md-0 mt-sm-3 pt-xs-3 p-0 mt-3 mt-md-0 mt-lg-0',
 					}}
-					label={SUBSECTION_KEYS.ZIP}
+					label={t(SUBSECTION_KEYS.ZIP)}
 					name={setFormPath('zip')}
 					rules={{
 						required: t('zip-required'),

@@ -81,7 +81,7 @@ export function FormEmployees({form}) {
 						label={
 							mobileContainerProps.isMobile
 								? ''
-								: SUBSECTION_KEYS.BUSINESS_FEDERAL_EMPLOYER_IDENTIFICATION_NUMBER
+								: t(SUBSECTION_KEYS.BUSINESS_FEDERAL_EMPLOYER_IDENTIFICATION_NUMBER)
 						}
 						name={setFormPath('hasFein')}
 						rules={{required: true}}
@@ -91,7 +91,7 @@ export function FormEmployees({form}) {
 				<FEINControlledInput
 					control={control}
 					label={
-						SUBSECTION_KEYS.FEDERAL_EMPLOYER_IDENTIFICATION_NUMBER
+						t(SUBSECTION_KEYS.FEDERAL_EMPLOYER_IDENTIFICATION_NUMBER)
 					}
 					moreInfoProps={{
 						callback: () => updateState(setFormPath('fein')),
@@ -120,7 +120,7 @@ export function FormEmployees({form}) {
 			>
 				<YearControlledInput
 					control={control}
-					label={SUBSECTION_KEYS.YEAR_BUSINESS_STARTED}
+					label={t(SUBSECTION_KEYS.YEAR_BUSINESS_STARTED)}
 					name={setFormPath('startBusinessAtYear')}
 					rules={{required: t('field-required')}}
 				/>
@@ -134,7 +134,7 @@ export function FormEmployees({form}) {
 			>
 				<ControlledSwitch
 					control={control}
-					label={SUBSECTION_KEYS.BUSINESS_YEAR_OPERATION}
+					label={t(SUBSECTION_KEYS.BUSINESS_YEAR_OPERATION)}
 					name={setFormPath('businessOperatesYearRound')}
 					onSelect={nextStep}
 					rules={{required: true}}
@@ -149,7 +149,7 @@ export function FormEmployees({form}) {
 			>
 				<NumberControlledInput
 					control={control}
-					label={SUBSECTION_KEYS.EMPLOYEES_AMOUNT}
+					label={t(SUBSECTION_KEYS.EMPLOYEES_AMOUNT)}
 					moreInfoProps={{
 						callback: () =>
 							updateState(setFormPath('partTimeEmployees')),
@@ -164,7 +164,7 @@ export function FormEmployees({form}) {
 					name={setFormPath('partTimeEmployees')}
 					rules={{
 						min: {
-							message: 'You must have at least one employee.',
+							message: t('at-least-one-employee'),
 							value: 1,
 						},
 						required: t('field-required'),
@@ -175,12 +175,12 @@ export function FormEmployees({form}) {
 			<MobileContainer
 				{...mobileContainerProps}
 				mobileSubSection={getMobileSubSection(
-					SUBSECTION_KEYS.BUSINESS_ANUAL_GROSS_REVENUE
+					SUBSECTION_KEYS.BUSINESS_ANNUAL_GROSS_REVENUE
 				)}
 			>
 				<CurrencyControlledInput
 					control={control}
-					label={SUBSECTION_KEYS.BUSINESS_ANUAL_GROSS_REVENUE}
+					label={t(SUBSECTION_KEYS.BUSINESS_ANNUAL_GROSS_REVENUE)}
 					name={setFormPath('estimatedAnnualGrossRevenue')}
 					rules={{required: t('field-required')}}
 				/>
@@ -194,7 +194,7 @@ export function FormEmployees({form}) {
 			>
 				<CurrencyControlledInput
 					control={control}
-					label={SUBSECTION_KEYS.OWNERS_ANNUAL_PAYROLL}
+					label={t(SUBSECTION_KEYS.OWNERS_ANNUAL_PAYROLL)}
 					name={setFormPath('annualPayrollForOwner')}
 					rules={{required: t('field-required')}}
 				/>
@@ -208,7 +208,7 @@ export function FormEmployees({form}) {
 			>
 				<CurrencyControlledInput
 					control={control}
-					label={SUBSECTION_KEYS.EMPLOYEES_ANNUAL_PAYROLL}
+					label={t(SUBSECTION_KEYS.EMPLOYEES_ANNUAL_PAYROLL)}
 					name={setFormPath('annualPayrollForEmployees')}
 					rules={{required: t('field-required')}}
 				/>

@@ -13,6 +13,7 @@ import {
 import {AppContext} from '../../context/AppContextProvider';
 import {useStepWizard} from '../../hooks/useStepWizard';
 import {AVAILABLE_STEPS} from '../../utils/constants';
+import {useTranslation} from 'react-i18next';
 
 export function Steps() {
 	const {
@@ -27,6 +28,7 @@ export function Steps() {
 			percentage,
 		},
 	} = useContext(AppContext);
+	const {t} = useTranslation();
 
 	return (
 		<StepList>
@@ -43,7 +45,7 @@ export function Steps() {
 					section === AVAILABLE_STEPS.BASICS_PRODUCT_QUOTE.section
 				}
 			>
-				Basics
+				{t(AVAILABLE_STEPS.BASICS_PRODUCT_QUOTE.section)}
 			</StepItem>
 
 			<StepItem
@@ -52,7 +54,7 @@ export function Steps() {
 				percentage={percentage[AVAILABLE_STEPS.BUSINESS.section]}
 				selected={section === AVAILABLE_STEPS.BUSINESS.section}
 			>
-				Business
+				{t(AVAILABLE_STEPS.BUSINESS.section)}
 			</StepItem>
 
 			<StepItem
@@ -61,7 +63,7 @@ export function Steps() {
 				percentage={percentage[AVAILABLE_STEPS.EMPLOYEES.section]}
 				selected={section === AVAILABLE_STEPS.EMPLOYEES.section}
 			>
-				Employees
+				{t(AVAILABLE_STEPS.EMPLOYEES.section)}
 			</StepItem>
 
 			<StepItem
@@ -70,7 +72,7 @@ export function Steps() {
 				percentage={percentage[AVAILABLE_STEPS.PROPERTY.section]}
 				selected={section === AVAILABLE_STEPS.PROPERTY.section}
 			>
-				Property
+				{t(AVAILABLE_STEPS.PROPERTY.section)}
 			</StepItem>
 		</StepList>
 	);

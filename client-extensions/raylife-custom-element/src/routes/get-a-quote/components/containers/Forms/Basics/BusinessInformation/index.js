@@ -82,7 +82,7 @@ export function FormBasicBusinessInformation({form, isMobile}) {
 							maxLength: 256,
 							onBlur: onFirstNameSettled,
 						}}
-						label={SUBSECTION_KEYS.FIRST_NAME}
+						label={t(SUBSECTION_KEYS.FIRST_NAME)}
 						name={setFormPath('firstName')}
 						rules={{
 							required: t('first-name-required'),
@@ -95,7 +95,7 @@ export function FormBasicBusinessInformation({form, isMobile}) {
 							className: 'flex-grow-1 p-0 ',
 							maxLength: 256,
 						}}
-						label={SUBSECTION_KEYS.LAST_NAME}
+						label={t(SUBSECTION_KEYS.LAST_NAME)}
 						name={setFormPath('lastName')}
 						rules={{
 							required: t('last-name-required'),
@@ -112,7 +112,7 @@ export function FormBasicBusinessInformation({form, isMobile}) {
 			>
 				<EmailControlledInput
 					control={control}
-					label={SUBSECTION_KEYS.BUSINESS_EMAIL}
+					label={t(SUBSECTION_KEYS.BUSINESS_EMAIL)}
 					name={setFormPath('business.email')}
 					rules={{
 						required: t('email-required'),
@@ -126,7 +126,7 @@ export function FormBasicBusinessInformation({form, isMobile}) {
 			>
 				<PhoneControlledInput
 					control={control}
-					label={SUBSECTION_KEYS.PHONE}
+					label={t(SUBSECTION_KEYS.PHONE)}
 					name={setFormPath('business.phone')}
 					rules={{
 						required: t('phone-required'),
@@ -142,7 +142,7 @@ export function FormBasicBusinessInformation({form, isMobile}) {
 			>
 				<WebsiteControlledInput
 					control={control}
-					label={SUBSECTION_KEYS.BUSINESS_WEBSITE}
+					label={t(SUBSECTION_KEYS.BUSINESS_WEBSITE)}
 					name={setFormPath('business.website')}
 				/>
 			</MobileContainer>

@@ -98,7 +98,7 @@ export function FormProperty({form}) {
 			>
 				<NumberControlledInput
 					control={control}
-					label={SUBSECTION_KEYS.HOW_MANY_STORIES_IS_THIS_BUILDING}
+					label={t(SUBSECTION_KEYS.HOW_MANY_STORIES_IS_THIS_BUILDING)}
 					name={setFormPath('stories')}
 					rules={{
 						min: {
@@ -118,7 +118,7 @@ export function FormProperty({form}) {
 			>
 				<SquareFeatControlledInput
 					control={control}
-					label={SUBSECTION_KEYS.HOW_MANY_SQUARE_FEET_OF_THE_BUILDING}
+					label={t(SUBSECTION_KEYS.HOW_MANY_SQUARE_FEET_OF_THE_BUILDING)}
 					moreInfoProps={{
 						callback: () =>
 							updateState(
@@ -152,7 +152,7 @@ export function FormProperty({form}) {
 				<SquareFeatControlledInput
 					control={control}
 					label={
-						SUBSECTION_KEYS.HOW_MANY_TOTAL_SQUARE_FEET_IS_THE_BUILDING
+						t(SUBSECTION_KEYS.HOW_MANY_TOTAL_SQUARE_FEET_IS_THE_BUILDING)
 					}
 					name={setFormPath('totalBuildingSquareFeet')}
 					rules={{
@@ -170,7 +170,7 @@ export function FormProperty({form}) {
 				<YearControlledInput
 					control={control}
 					label={
-						SUBSECTION_KEYS.WHAT_YEAR_WAS_THE_BUILDING_CONSTRUCTED
+						t(SUBSECTION_KEYS.WHAT_YEAR_WAS_THE_BUILDING_CONSTRUCTED)
 					}
 					moreInfoProps={{
 						callback: () =>
@@ -198,7 +198,7 @@ export function FormProperty({form}) {
 			>
 				<ControlledSwitch
 					control={control}
-					label={SUBSECTION_KEYS.PRIMARY_LOCATION}
+					label={t(SUBSECTION_KEYS.PRIMARY_LOCATION)}
 					moreInfoProps={{
 						callback: () =>
 							updateState(
@@ -267,7 +267,7 @@ export function FormProperty({form}) {
 									}
 								},
 							}}
-							label={SUBSECTION_KEYS.SWIMMING_POOL}
+							label={t(SUBSECTION_KEYS.SWIMMING_POOL)}
 							name={setFormPath('isThereSwimming')}
 							rules={{required: true}}
 						/>
@@ -276,7 +276,7 @@ export function FormProperty({form}) {
 					{isThereSwimming(form?.property?.isThereSwimming) && (
 						<ControlledSwitch
 							control={control}
-							label={SUBSECTION_KEYS.DIVING_BOARDS}
+							label={t(SUBSECTION_KEYS.DIVING_BOARDS)}
 							name={setFormPath('isThereDivingBoards')}
 							rules={{required: true}}
 						/>
