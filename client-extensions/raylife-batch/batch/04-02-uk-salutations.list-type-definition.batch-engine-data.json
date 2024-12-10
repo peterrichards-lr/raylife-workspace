@@ -1,0 +1,88 @@
+{
+  "configuration": {
+    "className": "com.liferay.headless.admin.list.type.dto.v1_0.ListTypeDefinition",
+    "parameters": {
+      "containsHeaders": "true",
+      "createStrategy": "UPSERT",
+      "onErrorFail": "false",
+      "updateStrategy": "UPDATE"
+    },
+    "taskItemDelegateName": "DEFAULT"
+  },
+  "items": [
+    {
+      "system": false,
+      "externalReferenceCode": "UK_SALUTATIONS",
+      "name": "UkSalutationss",
+      "name_i18n": {
+        "en-US": "UK Salutations"
+      },
+      "listTypeEntries": [
+        {
+          "externalReferenceCode": "MR",
+          "name": "Mr",
+          "key": "mr",
+          "name_i18n": {
+            "en-US": "Mr"
+          }
+        },
+        {
+          "externalReferenceCode": "MRS",
+          "name": "Mrs",
+          "key": "mrs",
+          "name_i18n": {
+            "en-US": "Mrs"
+          }
+        },
+        {
+          "externalReferenceCode": "MS",
+          "name": "Ms",
+          "key": "ms",
+          "name_i18n": {
+            "en-US": "Ms"
+          }
+        },
+        {
+          "externalReferenceCode": "DR",
+          "name": "Dr",
+          "key": "dr",
+          "name_i18n": {
+            "en-US": "Dr"
+          }
+        },
+        {
+          "externalReferenceCode": "PROF",
+          "name": "Prof",
+          "key": "prof",
+          "name_i18n": {
+            "en-US": "Prof"
+          }
+        },
+        {
+          "externalReferenceCode": "SIR",
+          "name": "Sir",
+          "key": "sir",
+          "name_i18n": {
+            "en-US": "Sir"
+          }
+        },
+        {
+          "externalReferenceCode": "LADY",
+          "name": "Lady",
+          "key": "lady",
+          "name_i18n": {
+            "en-US": "Lady"
+          }
+        },
+        {
+          "externalReferenceCode": "LORD",
+          "name": "Lord",
+          "key": "lord",
+          "name_i18n": {
+            "en-US": "Lord"
+          }
+        }
+      ]
+    }
+  ]
+}

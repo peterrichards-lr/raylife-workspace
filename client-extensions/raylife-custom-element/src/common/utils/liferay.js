@@ -16,6 +16,10 @@ export const Liferay = window.Liferay || {
 		getPathThemeImages: () => null,
 		getScopeGroupId: () => 0,
 		getSiteGroupId: () => 0,
+		getLanguageId: () => 'en_US',
+		getPathContext: () => '',
+		getPortalURL: () => '',
+		getUserName: () => ''
 	},
 	Util: {
 		LocalStorage: Object.assign(localStorage, {TYPES}),

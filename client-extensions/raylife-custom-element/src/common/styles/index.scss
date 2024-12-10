@@ -1,9 +1,10 @@
 // stylelint-disable selector-type-no-unknown
-liferay-remote-app-raylife {
+raylife-custom-element {
 	@import 'variables';
 
 	@import 'global';
 
+	@import 'apps/example';
 	@import 'apps/get-a-quote';
 	@import 'apps/quote-comparison';
 	@import 'apps/selected-quote';

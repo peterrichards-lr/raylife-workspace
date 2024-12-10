@@ -57,4 +57,5 @@ export const STORAGE_KEYS = {
 	PRODUCT: 'raylife-product',
 	QUOTE_ID: 'raylife-quote-id',
 	SELECTED_PRODUCT: 'raylife-selected-product',
+	EXAMPLE_FORM: 'example-form'
 };

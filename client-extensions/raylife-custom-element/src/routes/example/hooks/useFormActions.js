@@ -4,18 +4,14 @@
  */
 
 import {useContext} from 'react';
-import {STORAGE_KEYS, Storage} from '../../../common/services/liferay/storage';
-import {RAYLIFE_PAGES} from '../../../common/utils/constants';
+import {STORAGE_KEYS} from '../../../common/services/liferay/storage';
 import {clearExitAlert} from '../../../common/utils/exitAlert';
-import {redirectTo} from '../../../common/utils/liferay';
 import {AppContext} from '../context/AppContextProvider';
 import useFormActionsDefault from './useFormActionsDefault';
 import useFormActionsMobile from './useFormActionsMobile';
 
 const redirectToHomePage = () => {
 	clearExitAlert();
-
-	redirectTo(RAYLIFE_PAGES.HOME);
 
 	Storage.removeItem(STORAGE_KEYS.BACK_TO_EDIT);
 };

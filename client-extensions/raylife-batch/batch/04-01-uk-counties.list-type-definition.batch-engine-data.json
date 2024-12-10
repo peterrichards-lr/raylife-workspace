@@ -1,0 +1,483 @@
+{
+  "configuration": {
+    "className": "com.liferay.headless.admin.list.type.dto.v1_0.ListTypeDefinition",
+    "parameters": {
+      "containsHeaders": "true",
+      "createStrategy": "UPSERT",
+      "onErrorFail": "false",
+      "updateStrategy": "UPDATE"
+    },
+    "taskItemDelegateName": "DEFAULT"
+  },
+  "items": [
+    {
+      "system": false,
+      "externalReferenceCode": "UK_COUNTIES",
+      "name": "UkCounties",
+      "name_i18n": {
+        "en-US": "UK Counties"
+      },
+      "listTypeEntries": [
+        {
+          "externalReferenceCode": "AVN",
+          "name": "Avon",
+          "key": "avon",
+          "type": "string",
+          "name_i18n": {
+            "en-US": "Avon"
+          }
+        },
+        {
+          "externalReferenceCode": "BDF",
+          "name": "Bedfordshire",
+          "key": "bedfordshire",
+          "type": "string",
+          "name_i18n": {
+            "en-US": "Bedfordshire"
+          }
+        },
+        {
+          "externalReferenceCode": "BRK",
+          "name": "Berkshire",
+          "key": "berkshire",
+          "type": "string",
+          "name_i18n": {
+            "en-US": "Berkshire"
+          }
+        },
+        {
+          "externalReferenceCode": "BKM",
+          "name": "Buckinghamshire",
+          "key": "buckinghamshire",
+          "type": "string",
+          "name_i18n": {
+            "en-US": "Buckinghamshire"
+          }
+        },
+        {
+          "externalReferenceCode": "CAM",
+          "name": "Cambridgeshire",
+          "key": "cambridgeshire",
+          "type": "string",
+          "name_i18n": {
+            "en-US": "Cambridgeshire"
+          }
+        },
+        {
+          "externalReferenceCode": "CHS",
+          "name": "Cheshire",
+          "key": "cheshire",
+          "type": "string",
+          "name_i18n": {
+            "en-US": "Cheshire"
+          }
+        },
+        {
+          "externalReferenceCode": "CLV",
+          "name": "Cleveland",
+          "key": "cleveland",
+          "type": "string",
+          "name_i18n": {
+            "en-US": "Cleveland"
+          }
+        },
+        {
+          "externalReferenceCode": "CON",
+          "name": "Cornwall",
+          "key": "cornwall",
+          "type": "string",
+          "name_i18n": {
+            "en-US": "Cornwall"
+          }
+        },
+        {
+          "externalReferenceCode": "CMA",
+          "name": "Cumbria",
+          "key": "cumbria",
+          "type": "string",
+          "name_i18n": {
+            "en-US": "Cumbria"
+          }
+        },
+        {
+          "externalReferenceCode": "DBY",
+          "name": "Derbyshire",
+          "key": "derbyshire",
+          "type": "string",
+          "name_i18n": {
+            "en-US": "Derbyshire"
+          }
+        },
+        {
+          "externalReferenceCode": "DEV",
+          "name": "Devon",
+          "key": "devon",
+          "type": "string",
+          "name_i18n": {
+            "en-US": "Devon"
+          }
+        },
+        {
+          "externalReferenceCode": "DOR",
+          "name": "Dorset",
+          "key": "dorset",
+          "type": "string",
+          "name_i18n": {
+            "en-US": "Dorset"
+          }
+        },
+        {
+          "externalReferenceCode": "DUR",
+          "name": "Durham",
+          "key": "durham",
+          "type": "string",
+          "name_i18n": {
+            "en-US": "Durham"
+          }
+        },
+        {
+          "externalReferenceCode": "SXE",
+          "name": "East Sussex",
+          "key": "eastSussex",
+          "type": "string",
+          "name_i18n": {
+            "en-US": "East Sussex"
+          }
+        },
+        {
+          "externalReferenceCode": "ESS",
+          "name": "Essex",
+          "key": "essex",
+          "type": "string",
+          "name_i18n": {
+            "en-US": "Essex"
+          }
+        },
+        {
+          "externalReferenceCode": "GLS",
+          "name": "Gloucestershire",
+          "key": "gloucestershire",
+          "type": "string",
+          "name_i18n": {
+            "en-US": "Gloucestershire"
+          }
+        },
+        {
+          "externalReferenceCode": "HAM",
+          "name": "Hampshire",
+          "key": "hampshire",
+          "type": "string",
+          "name_i18n": {
+            "en-US": "Hampshire"
+          }
+        },
+        {
+          "externalReferenceCode": "HEF",
+          "name": "Herefordshire",
+          "key": "herefordshire",
+          "type": "string",
+          "name_i18n": {
+            "en-US": "Herefordshire"
+          }
+        },
+        {
+          "externalReferenceCode": "HRT",
+          "name": "Hertfordshire",
+          "key": "hertfordshire",
+          "type": "string",
+          "name_i18n": {
+            "en-US": "Hertfordshire"
+          }
+        },
+        {
+          "externalReferenceCode": "IOW",
+          "name": "Isle of Wight",
+          "key": "isleOfWight",
+          "type": "string",
+          "name_i18n": {
+            "en-US": "Isle of Wight"
+          }
+        },
+        {
+          "externalReferenceCode": "KEN",
+          "name": "Kent",
+          "key": "kent",
+          "type": "string",
+          "name_i18n": {
+            "en-US": "Kent"
+          }
+        },
+        {
+          "externalReferenceCode": "LAN",
+          "name": "Lancashire",
+          "key": "lancashire",
+          "type": "string",
+          "name_i18n": {
+            "en-US": "Lancashire"
+          }
+        },
+        {
+          "externalReferenceCode": "LEI",
+          "name": "Leicestershire",
+          "key": "leicestershire",
+          "type": "string",
+          "name_i18n": {
+            "en-US": "Leicestershire"
+          }
+        },
+        {
+          "externalReferenceCode": "LIN",
+          "name": "Lincolnshire",
+          "key": "lincolnshire",
+          "type": "string",
+          "name_i18n": {
+            "en-US": "Lincolnshire"
+          }
+        },
+        {
+          "externalReferenceCode": "LDN",
+          "name": "London",
+          "key": "london",
+          "type": "string",
+          "name_i18n": {
+            "en-US": "London"
+          }
+        },
+        {
+          "externalReferenceCode": "MSY",
+          "name": "Merseyside",
+          "key": "merseyside",
+          "type": "string",
+          "name_i18n": {
+            "en-US": "Merseyside"
+          }
+        },
+        {
+          "externalReferenceCode": "NFK",
+          "name": "Norfolk",
+          "key": "norfolk",
+          "type": "string",
+          "name_i18n": {
+            "en-US": "Norfolk"
+          }
+        },
+        {
+          "externalReferenceCode": "NTH",
+          "name": "Northamptonshire",
+          "key": "northamptonshire",
+          "type": "string",
+          "name_i18n": {
+            "en-US": "Northamptonshire"
+          }
+        },
+        {
+          "externalReferenceCode": "NBL",
+          "name": "Northumberland",
+          "key": "northumberland",
+          "type": "string",
+          "name_i18n": {
+            "en-US": "Northumberland"
+          }
+        },
+        {
+          "externalReferenceCode": "NYK",
+          "name": "North Yorkshire",
+          "key": "northYorkshire",
+          "type": "string",
+          "name_i18n": {
+            "en-US": "North Yorkshire"
+          }
+        },
+        {
+          "externalReferenceCode": "NTT",
+          "name": "Nottinghamshire",
+          "key": "nottinghamshire",
+          "type": "string",
+          "name_i18n": {
+            "en-US": "Nottinghamshire"
+          }
+        },
+        {
+          "externalReferenceCode": "OXF",
+          "name": "Oxfordshire",
+          "key": "oxfordshire",
+          "type": "string",
+          "name_i18n": {
+            "en-US": "Oxfordshire"
+          }
+        },
+        {
+          "externalReferenceCode": "RUT",
+          "name": "Rutland",
+          "key": "rutland",
+          "type": "string",
+          "name_i18n": {
+            "en-US": "Rutland"
+          }
+        },
+        {
+          "externalReferenceCode": "SAL",
+          "name": "Shropshire",
+          "key": "shropshire",
+          "type": "string",
+          "name_i18n": {
+            "en-US": "Shropshire"
+          }
+        },
+        {
+          "externalReferenceCode": "SOM",
+          "name": "Somerset",
+          "key": "somerset",
+          "type": "string",
+          "name_i18n": {
+            "en-US": "Somerset"
+          }
+        },
+        {
+          "externalReferenceCode": "SYK",
+          "name": "South Yorkshire",
+          "key": "southYorkshire",
+          "type": "string",
+          "name_i18n": {
+            "en-US": "South Yorkshire"
+          }
+        },
+        {
+          "externalReferenceCode": "STS",
+          "name": "Staffordshire",
+          "key": "staffordshire",
+          "type": "string",
+          "name_i18n": {
+            "en-US": "Staffordshire"
+          }
+        },
+        {
+          "externalReferenceCode": "SFK",
+          "name": "Suffolk",
+          "key": "suffolk",
+          "type": "string",
+          "name_i18n": {
+            "en-US": "Suffolk"
+          }
+        },
+        {
+          "externalReferenceCode": "SRY",
+          "name": "Surrey",
+          "key": "surrey",
+          "type": "string",
+          "name_i18n": {
+            "en-US": "Surrey"
+          }
+        },
+        {
+          "externalReferenceCode": "TWR",
+          "name": "Tyne and Wear",
+          "key": "tyneAndWear",
+          "type": "string",
+          "name_i18n": {
+            "en-US": "Tyne and Wear"
+          }
+        },
+        {
+          "externalReferenceCode": "WAR",
+          "name": "Warwickshire",
+          "key": "warwickshire",
+          "type": "string",
+          "name_i18n": {
+            "en-US": "Warwickshire"
+          }
+        },
+        {
+          "externalReferenceCode": "WMD",
+          "name": "West Midlands",
+          "key": "westMidlands",
+          "type": "string",
+          "name_i18n": {
+            "en-US": "West Midlands"
+          }
+        },
+        {
+          "externalReferenceCode": "SXW",
+          "name": "West Sussex",
+          "key": "westSussex",
+          "type": "string",
+          "name_i18n": {
+            "en-US": "West Sussex"
+          }
+        },
+        {
+          "externalReferenceCode": "WYK",
+          "name": "West Yorkshire",
+          "key": "westYorkshire",
+          "type": "string",
+          "name_i18n": {
+            "en-US": "West Yorkshire"
+          }
+        },
+        {
+          "externalReferenceCode": "WIL",
+          "name": "Wiltshire",
+          "key": "wiltshire",
+          "type": "string",
+          "name_i18n": {
+            "en-US": "Wiltshire"
+          }
+        },
+        {
+          "externalReferenceCode": "WOR",
+          "name": "Worcestershire",
+          "key": "worcestershire",
+          "type": "string",
+          "name_i18n": {
+            "en-US": "Worcestershire"
+          }
+        },
+        {
+          "externalReferenceCode": "CWD",
+          "name": "Clwyd",
+          "key": "clwyd",
+          "type": "string",
+          "name_i18n": {
+            "en-US": "Clwyd"
+          }
+        },
+        {
+          "externalReferenceCode": "DFD",
+          "name": "Dyfed",
+          "key": "dyfed",
+          "type": "string",
+          "name_i18n": {
+            "en-US": "Dyfed"
+          }
+        },
+        {
+          "externalReferenceCode": "GNT",
+          "name": "Gwent",
+          "key": "gwent",
+          "type": "string",
+          "name_i18n": {
+            "en-US": "Gwent"
+          }
+        },
+        {
+          "externalReferenceCode": "GWN",
+          "name": "Gwynedd",
+          "key": "gwynedd",
+          "type": "string",
+          "name_i18n": {
+            "en-US": "Gwynedd"
+          }
+        },
+        {
+          "externalReferenceCode": "MGM",
+          "name": "Merionethshire",
+          "key": "merionethshire",
+          "type": "string",
+          "name_i18n": {
+            "en-US": "Merionethshire"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -16,6 +16,7 @@ import {Liferay} from './common/utils/liferay';
 import GetAQuote from './routes/get-a-quote/pages/GetAQuote';
 import QuoteComparison from './routes/quote-comparison/pages/QuoteComparison';
 import SelectedQuote from './routes/selected-quote/pages/SelectedQuote';
+import Example from './routes/example/pages/Example';
 
 const DirectToCustomer = ({route}) => {
 	const SearchParams = new URLSearchParams(window.location.search);
@@ -32,6 +33,10 @@ const DirectToCustomer = ({route}) => {
 
 	if (routeEntry === 'selected-quote') {
 		return <SelectedQuote />;
+	}
+
+	if (routeEntry === 'example') {
+		return <Example />;
 	}
 };
 

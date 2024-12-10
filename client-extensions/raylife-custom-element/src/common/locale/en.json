@@ -96,7 +96,7 @@
       "what-year-was-the-building-constructed": "What year was the building constructed?",
       "year-business-started": "What year did you start your business?",
       "year-of-industry-experience": "Years of industry experience?",
-      "your-name": "your name",
+      "your-name": "Your Name",
       "zip": "zip",
       "at-least-one-employee": "You must have at least one employee.",
       "step-basics-business-information": "Just the business basics!",
@@ -119,6 +119,22 @@
       "limited-liability-partnership": "Limited Liability Partnership (LLP)",
       "partnership": "Partnership",
       "professional-corporation": "Professional Corporation (PC)",
-      "select": "Select"
+      "select": "Select",
+      "personal": "Personal",
+      "address": "Address",
+      "terms": "Terms",
+      "step-personal": "Let's get to know you",
+      "step-address": "Tell us where you live",
+      "step-terms": "Let's deal with the legal stuff",
+      "email": "Email Address",
+      "forname": "Forname",
+      "surname": "Surname",
+      "salutation": "Title",
+      "forename-required": "Forename is required.",
+      "forname-required": "Surname is required.",
+      "address-validation": "The house name / number and street are requred.",
+      "postcode-validation": "Postcode is required.",
+      "postcode-uk-validation": "Enter a valid UK postcode.",
+      "locality": "Locality"
    }
 }
