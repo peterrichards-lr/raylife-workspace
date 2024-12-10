@@ -3,8 +3,6 @@
  * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
-import {toSlug} from '../../../common/utils';
-
 const PRODUCT_QUOTE = [
 	'general-liability',
 	'professional-liability',
@@ -13,5 +11,5 @@ const PRODUCT_QUOTE = [
 ];
 
 export function allowedProductQuote(title) {
-	return PRODUCT_QUOTE.includes(toSlug(title));
+	return PRODUCT_QUOTE.includes(title);
 }

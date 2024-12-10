@@ -168,7 +168,7 @@ const adaptToProductQuote = async (channelId, items = []) => {
 	const productsList = [];
 
 	for (const item of items) {
-		const {description, name, productId} = item;
+		const {description, name, productId, slug} = item;
 		const {price, promoPrice} = await getSkuPrice(channelId, productId);
 		productsList.push({
 			description,
@@ -177,8 +177,8 @@ const adaptToProductQuote = async (channelId, items = []) => {
 				promoPrice
 			)}-${_formatCommerceProductPrice(price)}${i18next.t('per-month')})`,
 			template: {
-				allowed: allowedProductQuote(name),
-				name: toSlug(name),
+				allowed: allowedProductQuote(slug),
+				name: slug,
 			},
 			title: name,
 		});
