@@ -8,7 +8,7 @@ import '../../../types';
 import {allowedProductQuote} from '../../../routes/get-a-quote/utils/webContents';
 import {toSlug} from '../../utils';
 import {axios} from './api';
-import i18next from './i18n'
+import i18next from '../../../i18n'
 
 const headlessAPI = 'o/headless-commerce-delivery-catalog/v1.0';
 

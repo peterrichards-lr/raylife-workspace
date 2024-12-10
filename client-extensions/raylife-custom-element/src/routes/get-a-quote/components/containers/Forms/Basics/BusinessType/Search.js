@@ -19,6 +19,7 @@ import {getTaxonomyCategories} from '../../../../../services/TaxonomyVolucabular
 import {AVAILABLE_STEPS, TOTAL_OF_FIELD} from '../../../../../utils/constants';
 import {getLoadedContentFlag, truncateSearch} from '../../../../../utils/util';
 import BusinessTypeRadioGroup from './BusinessTypeRadioGroup';
+import {useTranslation} from 'react-i18next';
 
 const templateName = 'i-am-unable-to-find-my-industry';
 
@@ -38,6 +39,8 @@ export function BusinessTypeSearch({
 	const {setPercentage} = useStepWizard();
 	const [isLoading, setIsLoading] = useState(false);
 	const {applicationId, backToEdit} = getLoadedContentFlag();
+
+	const {t} = useTranslation();
 
 	const businessSearchDebounced = useDebounce(
 		form?.basics?.businessSearch,
@@ -63,7 +66,7 @@ export function BusinessTypeSearch({
 			setTaxonomyCategories(taxonomyCategories);
 		}
 		catch (error) {
-			setError('Unable to make the request. Please try again later.');
+			setError(t('get-taxonomy-error'));
 		}
 	};
 
@@ -111,12 +114,12 @@ export function BusinessTypeSearch({
 					)}
 					defaultValue=""
 					isMobileDevice={isMobileDevice}
-					label="Search for your primary industry and then select it from the list."
-					placeholder="Begin typing to show options..."
+					label={t('business-search-label')}
+					placeholder={t('business-search-placeholder')}
 					required
 					{...register('basics.businessSearch', {
 						required:
-							'Please, search for a business type in order to proceed.',
+							t('business-search-type-required'),
 					})}
 				>
 					{!isMobileDevice && (
@@ -130,7 +133,7 @@ export function BusinessTypeSearch({
 				</SearchInput>
 
 				<p className="mt-1 paragraph">
-					i.e. Apartments, Coffee, Medical, Pet Stores, etc
+					{t('business-search-hint')}
 				</p>
 			</div>
 
@@ -142,12 +145,12 @@ export function BusinessTypeSearch({
 
 			{noResults && (
 				<WarningBadge>
-					There are no results for &quot;
+					{t('no-results-prefix')} &quot;
 					{truncateSearch(
 						form?.basics?.businessSearch,
 						MAX_LENGTH_TO_TRUNCATE
 					)}
-					&quot;. Please try a different search.
+					&quot;{t('no-result-suffix')}
 				</WarningBadge>
 			)}
 
@@ -157,7 +160,7 @@ export function BusinessTypeSearch({
 				<MoreInfoButton
 					callback={() => updateState(templateName)}
 					event={TIP_EVENT}
-					label="I am unable to find my industry"
+					label={t('unable-to-find-industry')}
 					selected={isSelected(templateName)}
 					value={{templateName}}
 				/>

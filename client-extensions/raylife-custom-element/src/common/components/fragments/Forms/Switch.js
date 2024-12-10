@@ -47,7 +47,7 @@ export const Switch = React.forwardRef(
 						onClick={() => onChange('true')}
 						type="button"
 					>
-						t('yes')
+						{t('yes')}
 					</ClayButton>
 
 					<ClayButton
@@ -61,7 +61,7 @@ export const Switch = React.forwardRef(
 						onClick={() => onChange('false')}
 						type="button"
 					>
-						t('no')
+						{t('no')}
 					</ClayButton>
 				</div>
 

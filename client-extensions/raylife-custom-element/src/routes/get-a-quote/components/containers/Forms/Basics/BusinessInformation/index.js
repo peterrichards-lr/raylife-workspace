@@ -15,6 +15,7 @@ import {TIP_EVENT} from '../../../../../../../common/utils/events';
 import useMobileContainer from '../../../../../hooks/useMobileContainer';
 import {SUBSECTION_KEYS} from '../../../../../utils/constants';
 import MobileContainer from '../../../../mobile/MobileContainer';
+import {useTranslation} from 'react-i18next';
 
 import {BusinessInformationAddress} from './Address';
 
@@ -23,6 +24,7 @@ const setFormPath = (value) => `basics.businessInformation.${value}`;
 export function FormBasicBusinessInformation({form, isMobile}) {
 	const [dispatchEvent] = useCustomEvent(TIP_EVENT);
 	const {getMobileSubSection, mobileContainerProps} = useMobileContainer();
+	const {t} = useTranslation();
 
 	const {control} = useFormContext();
 
@@ -83,7 +85,7 @@ export function FormBasicBusinessInformation({form, isMobile}) {
 						label={SUBSECTION_KEYS.FIRST_NAME}
 						name={setFormPath('firstName')}
 						rules={{
-							required: 'First name is required.',
+							required: t('first-name-required'),
 						}}
 					/>
 
@@ -96,7 +98,7 @@ export function FormBasicBusinessInformation({form, isMobile}) {
 						label={SUBSECTION_KEYS.LAST_NAME}
 						name={setFormPath('lastName')}
 						rules={{
-							required: 'Last name is required.',
+							required: t('last-name-required'),
 						}}
 					/>
 				</div>
@@ -113,7 +115,7 @@ export function FormBasicBusinessInformation({form, isMobile}) {
 					label={SUBSECTION_KEYS.BUSINESS_EMAIL}
 					name={setFormPath('business.email')}
 					rules={{
-						required: 'Email is required.',
+						required: t('email-required'),
 					}}
 				/>
 			</MobileContainer>
@@ -127,7 +129,7 @@ export function FormBasicBusinessInformation({form, isMobile}) {
 					label={SUBSECTION_KEYS.PHONE}
 					name={setFormPath('business.phone')}
 					rules={{
-						required: 'Phone number is required.',
+						required: t('phone-required'),
 					}}
 				/>
 			</MobileContainer>

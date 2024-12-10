@@ -6,6 +6,7 @@
 import React, {useEffect} from 'react';
 import {Controller, useFormContext} from 'react-hook-form';
 import {Radio} from '../../../../../../../common/components/fragments/Forms/Radio';
+import {useTranslation} from 'react-i18next';
 
 const BusinessTypeRadioGroup = ({
 	businessTypes = [],
@@ -13,6 +14,7 @@ const BusinessTypeRadioGroup = ({
 	setNewSelectedProduct,
 }) => {
 	const {control, setValue} = useFormContext();
+	const {t} = useTranslation();
 
 	const selectedBusinessType = businessTypes.find(
 		({id}) => form?.basics?.businessCategoryId === id
@@ -69,7 +71,7 @@ const BusinessTypeRadioGroup = ({
 						/>
 					))
 				}
-				rules={{required: 'Please, Select a field.'}}
+				rules={{required: t('business-type-required')}}
 			/>
 		</fieldset>
 	);

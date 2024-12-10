@@ -11,6 +11,7 @@ import {StatesControlledSelect} from '../../../../../../../common/components/con
 import {Input} from '../../../../../../../common/components/fragments/Forms/Input';
 import {useLocation} from '../../../../../hooks/useLocation';
 import {SUBSECTION_KEYS} from '../../../../../utils/constants';
+import {useTranslation} from 'react-i18next';
 
 const setFormPath = (value) =>
 	`basics.businessInformation.business.location.${value}`;
@@ -19,6 +20,7 @@ export function BusinessInformationAddress() {
 	const ref = useRef();
 	const {setAutoComplete} = useLocation();
 	const {control, register, setValue} = useFormContext();
+	const {t} = useTranslation();
 
 	useEffect(() => {
 		if (ref.current) {
@@ -50,19 +52,19 @@ export function BusinessInformationAddress() {
 					inputProps={{
 						className:
 							'col-sm-12 col-md-8 col-lg-8 pr-lg-4 pr-md-4 p-0',
-						placeholder: 'Street address',
+						placeholder: t('street-address'),
 						ref,
 					}}
 					label={SUBSECTION_KEYS.PHYSICAL_BUSINESS_ADDRESS}
 					name={setFormPath('address')}
-					rules={{required: 'Business address is required.'}}
+					rules={{required: t('business-address-validation')}}
 				/>
 
 				<Input
 					{...register(setFormPath('addressApt'))}
 					className="col-lg-4 col-md-4 col-sm-12 p-0"
 					label="&nbsp;"
-					placeholder="Apt/Suite (optional)"
+					placeholder={t('address-apt')}
 				/>
 			</div>
 
@@ -75,7 +77,7 @@ export function BusinessInformationAddress() {
 					}}
 					label={SUBSECTION_KEYS.CITY}
 					name={setFormPath('city')}
-					rules={{required: 'City is required.'}}
+					rules={{required: t('city-validation')}}
 				/>
 
 				<StatesControlledSelect
@@ -87,7 +89,7 @@ export function BusinessInformationAddress() {
 					label={SUBSECTION_KEYS.STATE}
 					name={setFormPath('state')}
 					rules={{
-						required: 'This field is required.',
+						required: t('field-required'),
 					}}
 				/>
 
@@ -100,7 +102,7 @@ export function BusinessInformationAddress() {
 					label={SUBSECTION_KEYS.ZIP}
 					name={setFormPath('zip')}
 					rules={{
-						required: 'ZIP is required.',
+						required: t('zip-required'),
 					}}
 				/>
 			</div>

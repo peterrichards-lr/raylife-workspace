@@ -21,6 +21,7 @@ import {
 } from '../../../utils/businessFields';
 import {SUBSECTION_KEYS} from '../../../utils/constants';
 import MobileContainer from '../../mobile/MobileContainer';
+import {useTranslation} from 'react-i18next';
 
 const setFormPath = (value) => `business.${value}`;
 
@@ -33,6 +34,8 @@ export function FormBusiness({form}) {
 	const properties = form?.basics?.properties;
 	const {getMobileSubSection, mobileContainerProps, nextStep} =
 		useMobileContainer();
+
+	const {t} = useTranslation();
 
 	const forceValidation = () => {
 		setValue(
@@ -100,10 +103,10 @@ export function FormBusiness({form}) {
 					name={setFormPath('yearsOfExperience')}
 					rules={{
 						min: {
-							message: 'Must be equal or greater than 0.',
+							message: t('positive-integer'),
 							value: 0,
 						},
-						required: 'This field is required',
+						required: t('field-required'),
 					}}
 				/>
 			</MobileContainer>
@@ -152,7 +155,7 @@ export function FormBusiness({form}) {
 					label={SUBSECTION_KEYS.LEGAL_ENTITY}
 					name={setFormPath('legalEntity')}
 					rules={{
-						required: 'This field is required.',
+						required: t('field-required'),
 					}}
 				/>
 			</MobileContainer>
@@ -186,10 +189,10 @@ export function FormBusiness({form}) {
 						name={setFormPath('salesMerchandise')}
 						rules={{
 							pattern: {
-								message: 'Value must not be greater than 100%.',
+								message: t('max-percentage-validation'),
 								value: PERCENTAGE_REGEX_MAX_100,
 							},
-							required: 'Percent of sales is required.',
+							required: t('sales-percentage-required'),
 						}}
 					/>
 				</MobileContainer>
@@ -229,10 +232,10 @@ export function FormBusiness({form}) {
 						name={setFormPath('overallSales')}
 						rules={{
 							pattern: {
-								message: 'Value must not be greater than 100%.',
+								message: t('max-percentage-validation'),
 								value: PERCENTAGE_REGEX_MAX_100,
 							},
-							required: 'Percent of overall sales is required.',
+							required: t('overall-sales=percentage-required'),
 						}}
 					/>
 				</MobileContainer>

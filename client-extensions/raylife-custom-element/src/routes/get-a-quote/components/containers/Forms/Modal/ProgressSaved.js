@@ -25,6 +25,7 @@ import {
 import {AppContext} from '../../../../context/AppContextProvider';
 import {createQuoteRetrieve} from '../../../../services/QuoteRetrieve';
 import {updateRaylifeApplicationStatus} from '../../../../services/RaylifeApplication';
+import {useTranslation} from 'react-i18next';
 
 const liferaySiteName = getLiferaySiteName();
 
@@ -43,6 +44,8 @@ const ProgressSaved = ({
 	const {
 		state: {selectedStep},
 	} = useContext(AppContext);
+
+	const {t} = useTranslation();
 
 	const onSendLinkAndExit = async () => {
 		try {
@@ -91,7 +94,7 @@ const ProgressSaved = ({
 			redirectTo(RAYLIFE_PAGES.HOME);
 		}
 		catch (error) {
-			setError('Unable to save your information. Please try again.');
+			setError(t('unable-to-save'));
 			onClose();
 		}
 	};
@@ -120,7 +123,7 @@ const ProgressSaved = ({
 						)}
 						onClick={onClose}
 					>
-						Continue Quote
+						{t('continue-quote')}
 					</button>
 
 					<button
@@ -132,7 +135,7 @@ const ProgressSaved = ({
 						)}
 						onClick={onSendLinkAndExit}
 					>
-						Send Link &amp; Exit
+						{t('save-and-exit')}
 					</button>
 				</div>
 			}
@@ -155,7 +158,7 @@ const ProgressSaved = ({
 					</div>
 
 					<h2 className="font-weight-bolder">
-						Your progress is saved
+						{t('progress-saved')}
 					</h2>
 
 					<div
@@ -168,12 +171,11 @@ const ProgressSaved = ({
 						)}
 					>
 						<p>
-							We will send a link to&nbsp;<b>{email}</b>.
+							{t('link-by-email-prefix')}<b>{email}</b>{t('link-by-email-suffix')}
 						</p>
 
 						<p>
-							Use the link to pick up where you left off at any
-							time.
+							{t('use-link-to-continue')}
 						</p>
 					</div>
 				</div>

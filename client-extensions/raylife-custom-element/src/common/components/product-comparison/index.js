@@ -112,6 +112,7 @@ const ProductComparison = ({
 	product,
 	purchasable = true,
 }) => {
+	const {t} = useTranslation();
 	highlightMostPopularText = highlightMostPopularText === undefined ? t('most-popular') : highlightMostPopularText;
 
 	const {category, mostPopular, price, promo, ...productDetails} = JSON.parse(

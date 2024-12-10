@@ -18,6 +18,7 @@ import {
 } from '../utils/constants';
 import {verifyInputAgentPage} from '../utils/contact-agent';
 import {useStepWizard} from './useStepWizard';
+import {useTranslation} from 'react-i18next';
 
 /**
  *
@@ -41,6 +42,7 @@ const useFormActions = ({
 	const {
 		state: {selectedStep},
 	} = useContext(AppContext);
+	const {t} = useTranslation();
 
 	/**
 	 * @description When the application is created, we set the value to Form Context
@@ -109,7 +111,7 @@ const useFormActions = ({
 				setError('continueButton', {
 					message:
 						errorMessage ||
-						'There was an error processing your request. Please try again.',
+						t('processing-error'),
 					type: 'manual',
 				});
 

@@ -15,6 +15,7 @@ import useMobileContainer from '../../../hooks/useMobileContainer';
 import {useTriggerContext} from '../../../hooks/useTriggerContext';
 import {AVAILABLE_STEPS, SUBSECTION_KEYS} from '../../../utils/constants';
 import MobileContainer from '../../mobile/MobileContainer';
+import {useTranslation} from 'react-i18next';
 
 const setFormPath = (value) => `employees.${value}`;
 
@@ -25,6 +26,8 @@ export function FormEmployees({form}) {
 
 	const {getMobileSubSection, mobileContainerProps, nextStep} =
 		useMobileContainer();
+
+	const {t} = useTranslation();
 
 	const forceValidation = () => {
 		setValue(
@@ -104,7 +107,7 @@ export function FormEmployees({form}) {
 					name={setFormPath('fein')}
 					renderInput={hasFein(form?.employees?.hasFein)}
 					rules={{
-						required: 'FEIN is required.',
+						required: t('fein-required'),
 					}}
 				/>
 			</MobileContainer>
@@ -119,7 +122,7 @@ export function FormEmployees({form}) {
 					control={control}
 					label={SUBSECTION_KEYS.YEAR_BUSINESS_STARTED}
 					name={setFormPath('startBusinessAtYear')}
-					rules={{required: 'This field is required'}}
+					rules={{required: t('field-required')}}
 				/>
 			</MobileContainer>
 
@@ -164,7 +167,7 @@ export function FormEmployees({form}) {
 							message: 'You must have at least one employee.',
 							value: 1,
 						},
-						required: 'This field is required',
+						required: t('field-required'),
 					}}
 				/>
 			</MobileContainer>
@@ -179,7 +182,7 @@ export function FormEmployees({form}) {
 					control={control}
 					label={SUBSECTION_KEYS.BUSINESS_ANUAL_GROSS_REVENUE}
 					name={setFormPath('estimatedAnnualGrossRevenue')}
-					rules={{required: 'This field is required'}}
+					rules={{required: t('field-required')}}
 				/>
 			</MobileContainer>
 
@@ -193,7 +196,7 @@ export function FormEmployees({form}) {
 					control={control}
 					label={SUBSECTION_KEYS.OWNERS_ANNUAL_PAYROLL}
 					name={setFormPath('annualPayrollForOwner')}
-					rules={{required: 'This field is required'}}
+					rules={{required: t('field-required')}}
 				/>
 			</MobileContainer>
 
@@ -207,7 +210,7 @@ export function FormEmployees({form}) {
 					control={control}
 					label={SUBSECTION_KEYS.EMPLOYEES_ANNUAL_PAYROLL}
 					name={setFormPath('annualPayrollForEmployees')}
-					rules={{required: 'This field is required'}}
+					rules={{required: t('field-required')}}
 				/>
 			</MobileContainer>
 		</div>

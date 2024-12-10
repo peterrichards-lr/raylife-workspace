@@ -12,6 +12,8 @@ import {Steps} from '../components/containers/Steps';
 import {AppContext} from '../context/AppContextProvider';
 import {useStepWizard} from '../hooks/useStepWizard';
 import {useTriggerContext} from '../hooks/useTriggerContext';
+import { useTranslation } from "react-i18next";
+import {getCurrentLanguageKey} from '../../../i18n';
 
 import {AVAILABLE_STEPS} from '../utils/constants';
 
@@ -49,6 +51,12 @@ const QuoteApp = () => {
 			},
 		},
 	} = useContext(AppContext);
+
+	const { t, i18n: {changeLanguage, language} } = useTranslation();
+
+	useEffect(() => { 
+		changeLanguage(getCurrentLanguageKey());
+	}, []);
 
 	useEffect(() => {
 		updateState('');

@@ -16,6 +16,7 @@ import {useTriggerContext} from '../../../hooks/useTriggerContext';
 import {AVAILABLE_STEPS, SUBSECTION_KEYS} from '../../../utils/constants';
 import {isHabitational, isThereSwimming} from '../../../utils/propertyFields';
 import MobileContainer from '../../mobile/MobileContainer';
+import {useTranslation} from 'react-i18next';
 
 const setFormPath = (value) => `property.${value}`;
 
@@ -24,6 +25,7 @@ export function FormProperty({form}) {
 	const {control, getValues, setValue} = useFormContext();
 
 	const {dispatch} = useContext(AppContext);
+	const {t} = useTranslation();
 
 	const properties = form?.basics?.properties;
 	const {getMobileSubSection, mobileContainerProps, nextStep} =
@@ -81,7 +83,7 @@ export function FormProperty({form}) {
 			>
 				<ControlledSwitch
 					control={control}
-					label={`Do you own the building at ${form.basics.businessInformation.business.location.address}?`}
+					label={`${t('own-building-prefix')}${form.basics.businessInformation.business.location.address}${t('own-building-suffix')}`}
 					name={setFormPath('doOwnBuildingAtAddress')}
 					onSelect={nextStep}
 					rules={{required: true}}
@@ -100,10 +102,10 @@ export function FormProperty({form}) {
 					name={setFormPath('stories')}
 					rules={{
 						min: {
-							message: 'Must be equal or greater than 0.',
+							message: t('positive-integer'),
 							value: 0,
 						},
-						required: 'This field is required',
+						required: t('field-required'),
 					}}
 				/>
 			</MobileContainer>
@@ -136,7 +138,7 @@ export function FormProperty({form}) {
 					}}
 					name={setFormPath('buildingSquareFeetOccupied')}
 					rules={{
-						required: 'This field is required',
+						required: t('field-required'),
 					}}
 				/>
 			</MobileContainer>
@@ -154,7 +156,7 @@ export function FormProperty({form}) {
 					}
 					name={setFormPath('totalBuildingSquareFeet')}
 					rules={{
-						required: 'This field is required',
+						required: t('field-required'),
 					}}
 				/>
 			</MobileContainer>
@@ -183,7 +185,7 @@ export function FormProperty({form}) {
 					}}
 					name={setFormPath('yearBuilding')}
 					rules={{
-						required: 'This field is required',
+						required: t('field-required'),
 					}}
 				/>
 			</MobileContainer>

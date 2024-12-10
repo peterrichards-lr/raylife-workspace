@@ -14,6 +14,7 @@ import {TIP_EVENT} from '../../../../../../common/utils/events';
 import {AppContext} from '../../../../context/AppContextProvider';
 import {useProductQuotes} from '../../../../hooks/useProductQuotes';
 import {useTriggerContext} from '../../../../hooks/useTriggerContext';
+import {useTranslation} from 'react-i18next';
 
 export function FormBasicProductQuote({form}) {
 	const {productQuotes} = useProductQuotes();
@@ -26,6 +27,7 @@ export function FormBasicProductQuote({form}) {
 			},
 		},
 	} = useContext(AppContext);
+	const {t} = useTranslation();
 
 	useEffect(() => {
 		if (productQuoteId && productQuotes.length) {
@@ -69,7 +71,7 @@ export function FormBasicProductQuote({form}) {
 								isMobile,
 						})}
 					>
-						Select a product to quote.
+						{t('select-product')}
 					</label>
 				</div>
 
