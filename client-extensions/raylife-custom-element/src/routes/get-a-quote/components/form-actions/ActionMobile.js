@@ -6,12 +6,15 @@
 import ClayButton from '@clayui/button';
 import React from 'react';
 
+import {useTranslation} from 'react-i18next';
+
 export function ActionMobile({
 	onClickSaveAndExit,
 	onPrevious,
 	onSaveDisabled,
 	showSaveAndExit,
 }) {
+	const {t} = useTranslation();
 	return (
 		<div className="d-flex justify-content-between mx-0 row">
 			{onPrevious && (
@@ -20,7 +23,7 @@ export function ActionMobile({
 					displayType="style-neutral"
 					onClick={onPrevious}
 				>
-					Previous
+					{t('previous')}
 				</ClayButton>
 			)}
 
@@ -32,7 +35,7 @@ export function ActionMobile({
 						displayType="style-neutral"
 						onClick={onClickSaveAndExit}
 					>
-						Save & Exit
+						{t('save-and-exit')}
 					</ClayButton>
 				)}
 			</div>

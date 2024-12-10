@@ -60,6 +60,8 @@
       "processing-error": "There was an error processing your request. Please try again.",
       "more-questions-business": "We need to ask you for more information about your business.",
       "more-questions-employees": "We need to ask you for more information about your employees.",
-      "more-questions-property": "We need to ask you for more information about your business location."
+      "more-questions-property": "We need to ask you for more information about your business location.",
+      "previous": "Previous",
+      "continue": "Continue"
    }
 }

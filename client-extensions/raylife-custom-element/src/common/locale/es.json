@@ -60,6 +60,8 @@
       "processing-error": "Hubo un error al procesar su solicitud. Intente nuevamente.",
       "more-questions-business": "Necesitamos hacerle más preguntas sobre su negocio.",
       "more-questions-employees": "Necesitamos hacerle más preguntas sobre sus empleados.",
-      "more-questions-property": "Necesitamos hacerle más preguntas sobre la ubicación de su negocio."
+      "more-questions-property": "Necesitamos hacerle más preguntas sobre la ubicación de su negocio.",
+      "previous": "Previo",
+      "continue": "Continuar"
    }
 }

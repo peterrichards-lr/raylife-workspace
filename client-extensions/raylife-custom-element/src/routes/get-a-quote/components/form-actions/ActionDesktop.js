@@ -8,6 +8,8 @@ import ClayIcon from '@clayui/icon';
 import classNames from 'classnames';
 import React from 'react';
 
+import {useTranslation} from 'react-i18next';
+
 export function ActionDesktop({
 	isMobileDevice,
 	isValid = true,
@@ -18,6 +20,7 @@ export function ActionDesktop({
 	showContinueButton,
 	showSaveAndExit,
 }) {
+	const {t} = useTranslation();
 	return (
 		<div
 			className={classNames('d-flex justify-content-between', {
@@ -30,7 +33,7 @@ export function ActionDesktop({
 					displayType="null"
 					onClick={onPrevious}
 				>
-					Previous
+					{t('previous')}
 				</ClayButton>
 			)}
 
@@ -42,7 +45,7 @@ export function ActionDesktop({
 						displayType="secondary"
 						onClick={onClickSaveAndExit}
 					>
-						Save & Exit
+						{t('save-and-exit')}
 					</ClayButton>
 				)}
 
@@ -55,7 +58,7 @@ export function ActionDesktop({
 						disabled={!isValid}
 						onClick={onNext}
 					>
-						Continue
+						{t('continue')}
 						<span className="inline-item inline-item-before ml-1">
 							<ClayIcon symbol="angle-right" />
 						</span>
