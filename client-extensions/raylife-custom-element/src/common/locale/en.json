@@ -45,9 +45,9 @@
       "select-product": "Select a product to quote.",
       "unable-to-save": "Unable to save your information. Please try again.",
       "continue-quote": "Continue Quote",
-      "save-and-exit": "Send Link &amp; Exit",
+      "save-and-exit": "Send Link & Exit",
       "progress-saved": "Your progress is saved",
-      "link-by-email-prefix": "We will send a link to&nbsp;",
+      "link-by-email-prefix": "We will send a link to ",
       "link-by-email-suffix": ".",
       "use-link-to-continue": "Use the link to pick up where you left off at any time.",
       "positive-integer": "Must be equal or greater than 0.",
@@ -109,6 +109,15 @@
       "basics": "Basics",
       "business": "Business",
       "employees": "Employees",
-      "property": "Property"
+      "property": "Property",
+      "search": "Search",
+      "association": "Association",
+      "corporation": "Corporation",
+      "individual": "Individual/Sole Proprietor",
+      "joint-venture": "Joint Venture",
+      "limited-liability-company": "Limited Liability Company (LLC)",
+      "limited-liability-partnership": "Limited Liability Partnership (LLP)",
+      "partnership": "Partnership",
+      "professional-corporation": "Professional Corporation (PC)"
    }
 }

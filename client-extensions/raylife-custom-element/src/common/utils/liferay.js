@@ -24,6 +24,12 @@ export const Liferay = window.Liferay || {
 	authToken: '',
 };
 
+export const getCurrentLanguageKey = () => {
+   const [languageKey] = Liferay.ThemeDisplay.getLanguageId().split("_");
+ 
+   return languageKey;
+ };
+
 export function getLiferaySiteName() {
 	const path = Liferay.ThemeDisplay.getPathContext();
 

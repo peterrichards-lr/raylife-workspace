@@ -4,7 +4,7 @@
  */
 
 import _axios from 'axios';
-import {Liferay} from '../../utils/liferay';
+import {Liferay, getCurrentLanguageKey} from '../../utils/liferay';
 
 const {
 	REACT_APP_LIFERAY_API = window.location.origin +
@@ -15,5 +15,6 @@ export const axios = _axios.create({
 	baseURL: REACT_APP_LIFERAY_API,
 	headers: {
 		'x-csrf-token': Liferay.authToken,
+		'Accept-Language': getCurrentLanguageKey()
 	},
 });

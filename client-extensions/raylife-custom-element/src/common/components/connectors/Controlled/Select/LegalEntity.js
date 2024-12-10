@@ -10,15 +10,18 @@ import {ControlledSelect} from '.';
 
 import {useLegalEntity} from '../../../../../routes/get-a-quote/hooks/useLegalEntity';
 
+import {useTranslation} from 'react-i18next';
+
 export function LegalEntityControlledSelect({...props}) {
 	const {entities} = useLegalEntity();
-
+	const {t} = useTranslation();
+	
 	return (
 		<ControlledSelect {...props}>
 			<ClaySelect.Option hidden label="Select" />
 
 			{entities.map(({name}) => (
-				<ClaySelect.Option key={name} label={name} value={name} />
+				<ClaySelect.Option key={name} label={t(name)} value={name} />
 			))}
 		</ControlledSelect>
 	);

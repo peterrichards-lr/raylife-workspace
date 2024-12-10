@@ -109,6 +109,15 @@
       "basics": "Lo básico",
       "business": "Negocio",
       "employees": "Empleados",
-      "property": "Propiedad"
+      "property": "Propiedad",
+      "search": "Buscar",
+      "association": "Asociación",
+      "corporation": "Corporación",
+      "individual": "Individual/Propietario único",
+      "joint-venture": "Empresa conjunta",
+      "limited-liability-company": "Compañía de responsabilidad limitada (LLC)",
+      "limited-liability-partnership": "Sociedad de responsabilidad limitada (LLP)",
+      "partnership": "Sociedad",
+      "professional-corporation": "Corporación profesional (PC)"
    }
 }

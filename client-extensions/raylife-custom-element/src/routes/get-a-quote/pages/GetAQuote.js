@@ -13,7 +13,7 @@ import {AppContext} from '../context/AppContextProvider';
 import {useStepWizard} from '../hooks/useStepWizard';
 import {useTriggerContext} from '../hooks/useTriggerContext';
 import { useTranslation } from "react-i18next";
-import {getCurrentLanguageKey} from '../../../i18n';
+import {getCurrentLanguageKey} from '../../../common/utils/liferay';
 
 import {AVAILABLE_STEPS} from '../utils/constants';
 

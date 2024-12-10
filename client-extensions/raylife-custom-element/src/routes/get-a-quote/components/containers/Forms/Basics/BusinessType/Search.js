@@ -127,7 +127,7 @@ export function BusinessTypeSearch({
 							className="font-weight-bolder ml-3 search text-paragraph text-small-caps"
 							displayType="primary"
 						>
-							Search
+							{t('search')}
 						</ClayButton>
 					)}
 				</SearchInput>
