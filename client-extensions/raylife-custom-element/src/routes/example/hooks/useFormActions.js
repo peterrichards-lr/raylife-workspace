@@ -4,7 +4,7 @@
  */
 
 import {useContext} from 'react';
-import {STORAGE_KEYS} from '../../../common/services/liferay/storage';
+import {STORAGE_KEYS, Storage} from '../../../common/services/liferay/storage';
 import {clearExitAlert} from '../../../common/utils/exitAlert';
 import {AppContext} from '../context/AppContextProvider';
 import useFormActionsDefault from './useFormActionsDefault';

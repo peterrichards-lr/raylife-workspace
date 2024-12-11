@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
-import {LiferayAdapt} from '../../../common/services/liferay/adapter';
+import {LiferayAdapt} from '../services/liferay/adapter';
 import {axios} from '../../../common/services/liferay/api';
 import {getGuestPermissionToken} from '../../../common/services/token';
 import {Liferay} from '../../../common/utils/liferay';
@@ -43,15 +43,17 @@ const updateExample = async (exampleId, payload = null) => {
 	});
 };
 
-export function createOrUpdateExample(form, status) {
-	const payload = LiferayAdapt.adaptToFormApplicationRequest(form, status);
-	const exampleId = form?.basics?.applicationId;
+export async function createOrUpdateExample(form) {
+	const payload = LiferayAdapt.adaptToFormExampleRequest(form);
+	const exampleId = form?.personal?.exampleId;
 
 	if (exampleId) {
 		return updateExample(exampleId, payload);
 	}
 
-	return axios.post(`${ExampleAPI}/`, payload).catch((error) => {
+	try {
+		return await axios.post(`${ExampleAPI}/`, payload);
+	} catch (error) {
 		console.error(error);
-	});
+	}
 }

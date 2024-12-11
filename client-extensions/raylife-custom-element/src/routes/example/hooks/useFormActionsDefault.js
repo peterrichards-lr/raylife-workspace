@@ -8,12 +8,12 @@ import {
   STORAGE_KEYS,
   Storage,
 } from '../../../common/services/liferay/storage';
-import { redirectTo } from '../../../common/utils/liferay';
 import { smoothScroll } from '../../../common/utils/scroll';
 import { AppContext } from '../context/AppContextProvider';
-import { AVAILABLE_STEPS } from '../utils/constants';
 import { useStepWizard } from './useStepWizard';
+import { createOrUpdateExample } from '../services/Example';
 import { useTranslation } from 'react-i18next';
+import { OBJECT_MESSAGE } from '../utils/constants';
 
 /**
  *
@@ -25,7 +25,7 @@ import { useTranslation } from 'react-i18next';
  */
 
 const useFormActions = ({ form, nextSection, previousSection }) => {
-  const [applicationId, setApplicationId] = useState();
+  const [exampleId, setExampleId] = useState();
   const { setError, setValue } = useFormContext();
   const { setSection } = useStepWizard();
   const {
@@ -40,20 +40,20 @@ const useFormActions = ({ form, nextSection, previousSection }) => {
    */
 
   useEffect(() => {
-    if (applicationId) {
-      setValue('basics.applicationId', applicationId);
+    if (exampleId) {
+      setValue('personal.exampleId', exampleId);
 
       const createDate = new Date().toISOString().split('T')[0];
-      setValue('basics.applicationCreateDate', createDate);
+      setValue('personal.exampleCreateDate', createDate);
 
-      Storage.setItem(STORAGE_KEYS.APPLICATION_ID, applicationId);
+      Storage.setItem(STORAGE_KEYS.EXAMPLE_ID, exampleId);
     }
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [applicationId]);
+  }, [exampleId]);
 
   useEffect(() => {
-    Storage.setItem(STORAGE_KEYS.APPLICATION_FORM, JSON.stringify(form));
+    Storage.setItem(STORAGE_KEYS.EXAMPLE_FORM, JSON.stringify(form));
   }, [form]);
 
   const _onValidation = useCallback(() => {
@@ -74,11 +74,23 @@ const useFormActions = ({ form, nextSection, previousSection }) => {
    * @param {*} data
    */
   const onNext = useCallback(async () => {
-    if (nextSection) {
-      setSection(nextSection);
+    const response = await createOrUpdateExample(form);
 
-      return smoothScroll();
-    }
+		if (response) {
+			setExampleId(response.data.id);
+
+      if (nextSection) {
+        setSection(nextSection);
+
+        return smoothScroll();
+      }
+
+			return response;
+		}
+
+		setError('exampleObject', {
+			message: t(OBJECT_MESSAGE.EXAMPLE.DISABLED),
+		});
   }, [
     selectedStep.index,
     form,

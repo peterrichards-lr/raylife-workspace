@@ -43,29 +43,14 @@ export function Forms({form, formActionContext: {isMobileDevice}}) {
 			sectionFormKeys[sectionFormKeys.length - 1]?.toLowerCase();
 
 		switch (stepName) {
-			case 'basics':
-				const stepBasicName = Object.keys(form?.basics)[
-					Object.keys(form?.basics).length - 1
-				]?.toLowerCase();
-
-				if (stepBasicName === 'businessInformation') {
-					setSection(AVAILABLE_STEPS.BASICS_BUSINESS_INFORMATION);
-				}
-				else if (stepBasicName === 'business-type') {
-					setSection(AVAILABLE_STEPS.BASICS_BUSINESS_TYPE);
-				}
-				else {
-					setSection(AVAILABLE_STEPS.BASICS_PRODUCT_QUOTE);
-				}
+			case 'personal':
+				setSection(AVAILABLE_STEPS.PERSONAL);
 				break;
-			case 'business':
-				setSection(AVAILABLE_STEPS.BUSINESS);
+			case 'address':
+				setSection(AVAILABLE_STEPS.ADDRESS);
 				break;
-			case 'employees':
-				setSection(AVAILABLE_STEPS.EMPLOYEES);
-				break;
-			case 'property':
-				setSection(AVAILABLE_STEPS.PROPERTY);
+			case 'terms':
+				setSection(AVAILABLE_STEPS.TERMS);
 				break;
 			default:
 				break;

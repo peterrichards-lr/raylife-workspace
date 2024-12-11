@@ -65,12 +65,6 @@ const ExampleApp = () => {
       <main className="d-flex flex-wrap justify-content-lg-start justify-content-md-center">
         <h2 className="display-4 mb-6 mx-6 step-title">
           {t(selectedStep.title)}
-
-          {AVAILABLE_STEPS.ADDRESS.section === selectedStep.section && (
-            <span className="primary">
-              {form.address}
-            </span>
-          )}
         </h2>
 
         <FormLayout form={form} />

@@ -135,6 +135,8 @@
       "address-validation": "The house name / number and street are requred.",
       "postcode-validation": "Postcode is required.",
       "postcode-uk-validation": "Enter a valid UK postcode.",
-      "locality": "Locality"
+      "locality": "Locality",
+      "county": "County",
+      "county-validation": "County is required"
    }
 }
