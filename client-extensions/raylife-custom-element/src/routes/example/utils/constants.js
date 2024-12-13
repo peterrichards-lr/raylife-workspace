@@ -21,6 +21,7 @@ export const SUBSECTION_KEYS = {
   LOCALITY: 'locality',
   COUNTY: 'county',
   POSTCODE: 'postcode',
+  TERMS: 'terms'
 };
 
 export const AVAILABLE_STEPS = {
@@ -88,6 +89,6 @@ export const PICK_LISTS = {
 
 export const OBJECT_MESSAGE = {
 	EXAMPLE: {
-		DISABLED: 'app-object-disabled',
+		DISABLED: 'example-object-disabled',
 	},
 };

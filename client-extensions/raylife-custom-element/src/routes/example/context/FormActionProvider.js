@@ -11,12 +11,8 @@ import {AppContext} from './AppContextProvider';
 export const FormActionContext = createContext();
 
 const FormActionProvider = ({children, form}) => {
-	const [showProgressModal, setShowProgressModal] = useState(false);
-	const [errorModal, setErrorModal] = useState();
 	const {
 		formState: {errors, isValid},
-		getValues,
-		setValue,
 	} = useFormContext();
 
 	const [loading, setLoading] = useState(false);
@@ -38,15 +34,6 @@ const FormActionProvider = ({children, form}) => {
 		previousSection: steps[currentStepIndex - 1]
 	});
 
-	const onClickSaveAndExit = () => {
-		setLoading(true);
-
-		onSave()
-			.then(() => setShowProgressModal(true))
-			.catch((error) => console.error(error))
-			.finally(() => setLoading(false));
-	};
-
 	const isContinueButtonVisible = () => {
 		if (!isMobile) {
 			return true;
@@ -59,15 +46,12 @@ const FormActionProvider = ({children, form}) => {
 		<FormActionContext.Provider
 			value={{
 				actionProps: {
-					onClickSaveAndExit,
 					onNext,
 					onPrevious,
 					showContinueButton: isContinueButtonVisible()
 				},
-				errorModal,
 				isMobileDevice: isMobile,
 				isValid,
-				setShowProgressModal,
 			}}
 		>
 			{children}

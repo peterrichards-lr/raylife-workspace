@@ -4,7 +4,7 @@ import { useFormContext } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 import { ControlledInput } from '../../../../../common/components/connectors/Controlled/Input';
 import { EmailControlledInput } from '../../../../../common/components/connectors/Controlled/Input/Email';
-import { SaluationControlledSelect } from '../../Controlled/Salutation';
+import { SaluationControlledSelect } from '../../connectors/Controlled/Salutation';
 import useMobileContainer from '../../../hooks/useMobileContainer';
 import { SUBSECTION_KEYS } from '../../../utils/constants';
 import MobileContainer from '../../mobile/MobileContainer';

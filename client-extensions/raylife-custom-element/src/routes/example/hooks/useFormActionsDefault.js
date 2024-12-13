@@ -74,23 +74,40 @@ const useFormActions = ({ form, nextSection, previousSection }) => {
    * @param {*} data
    */
   const onNext = useCallback(async () => {
-    const response = await createOrUpdateExample(form);
+    try {
+      setError('serverValidation', null);
+      const response = await createOrUpdateExample(form);
 
-		if (response) {
-			setExampleId(response.data.id);
+      if (response) {
+        setExampleId(response.data.id);
 
-      if (nextSection) {
-        setSection(nextSection);
+        if (nextSection) {
+          setSection(nextSection);
 
-        return smoothScroll();
+          return smoothScroll();
+        }
+
+        return response;
+      }
+    } catch (e) {
+      if (e.isAxiosError) {
+        if (e?.response?.status === 400) {
+          setError('serverValidation', {
+            message: e.response?.data?.title || 'Unexepcted validation error',
+          });
+        } else if (e?.response?.status === 403) {
+          setError('exampleObject', {
+            message: t(OBJECT_MESSAGE.EXAMPLE.DISABLED),
+          });
+        } else {
+          console.error(e);
+        }
+        return;
       }
 
-			return response;
-		}
-
-		setError('exampleObject', {
-			message: t(OBJECT_MESSAGE.EXAMPLE.DISABLED),
-		});
+      console.error(e);
+      return;
+    }
   }, [
     selectedStep.index,
     form,

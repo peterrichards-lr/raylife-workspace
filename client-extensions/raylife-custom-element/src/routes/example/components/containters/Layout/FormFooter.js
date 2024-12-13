@@ -30,7 +30,7 @@ const WarningMessage = ({displayError, isMobileDevice}) => {
 };
 
 const FormFooterDesktop = ({
-	formActionContext: {actionProps, errorModal, isMobileDevice, isValid},
+	formActionContext: {actionProps, isMobileDevice, isValid},
 }) => {
 	const {
 		formState: {errors},
@@ -46,8 +46,8 @@ const FormFooterDesktop = ({
 			<WarningMessage
 				displayError={
 					errors?.continueButton?.message ||
-					errorModal ||
-					errors?.applicationObject?.message
+					errors?.exampleObject?.message ||
+					errors?.serverValidation?.message
 				}
 				isMobileDevice={isMobileDevice}
 			/>

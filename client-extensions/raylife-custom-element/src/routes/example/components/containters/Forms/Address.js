@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from 'react';
 import { useFormContext } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 import { ControlledInput } from '../../../../../common/components/connectors/Controlled/Input';
-import { CountyControlledSelect } from '../../Controlled/County';
+import { CountyControlledSelect } from '../../connectors/Controlled/County';
 import useMobileContainer from '../../../hooks/useMobileContainer';
 import { SUBSECTION_KEYS } from '../../../utils/constants';
 import MobileContainer from '../../mobile/MobileContainer';

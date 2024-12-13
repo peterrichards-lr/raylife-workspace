@@ -1,9 +1,9 @@
 import { ClaySelect } from '@clayui/form';
 
-import { ControlledSelect } from '../../../../common/components/connectors/Controlled/Select';
+import { ControlledSelect } from '../../../../../common/components/connectors/Controlled/Select';
 import { useTranslation } from 'react-i18next';
 
-import { getSalutations } from '../../services/LiferayPickList';
+import { getSalutations } from '../../../services/LiferayPickList';
 import { useEffect, useState } from 'react';
 
 export function SaluationControlledSelect({ rules, ...props }) {

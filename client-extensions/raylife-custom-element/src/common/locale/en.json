@@ -137,6 +137,12 @@
       "postcode-uk-validation": "Enter a valid UK postcode.",
       "locality": "Locality",
       "county": "County",
-      "county-validation": "County is required"
+      "county-validation": "County is required",
+      "date-of-birth": "Date of Birth",
+      "must-be-thirteen-or-over": "You must be at least 13 to accept the terms.",
+      "acceptance-statement": "I accept the terms and conditions.",
+      "terms-and-conditions": "Terms and Conditions",
+      "acceptance-validation": "You must accept the terms and conditions.",
+      "example-object-disabled": "Example object is disabled"
    }
 }

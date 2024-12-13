@@ -51,9 +51,5 @@ export async function createOrUpdateExample(form) {
 		return updateExample(exampleId, payload);
 	}
 
-	try {
-		return await axios.post(`${ExampleAPI}/`, payload);
-	} catch (error) {
-		console.error(error);
-	}
+	return await axios.post(`${ExampleAPI}/`, payload);
 }
