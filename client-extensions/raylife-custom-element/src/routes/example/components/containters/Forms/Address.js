@@ -58,7 +58,9 @@ export function FormAddress({ form, isMobile }) {
           <CountyControlledSelect
             control={control}
             inputProps={{
-              className: 'col-sm-12 col-md-6 col-lg-6 pr-sm-4 pr-xs-0 p-0',
+              className: classNames('col-sm-12 col-md-6 col-lg-6 pr-md-2 pr-xs-0 p-0', {
+                'mb-5': isMobile,
+              })
             }}
             label={t(SUBSECTION_KEYS.COUNTY)}
             name={setFormPath('county')}
@@ -67,7 +69,7 @@ export function FormAddress({ form, isMobile }) {
           <ControlledInput
             control={control}
             inputProps={{
-              className: 'col-sm-12 col-md-6 col-lg-6 pr-sm-4 pr-xs-0 p-0',
+              className: 'col-sm-12 col-md-6 col-lg-6 pl-md-2 pr-xs-0 p-0',
             }}
             label={t(SUBSECTION_KEYS.POSTCODE)}
             name={setFormPath('postcode')}

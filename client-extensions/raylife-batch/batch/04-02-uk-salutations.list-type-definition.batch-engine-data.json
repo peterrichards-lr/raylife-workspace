@@ -23,7 +23,8 @@
           "name": "Mr",
           "key": "mr",
           "name_i18n": {
-            "en-US": "Mr"
+            "en-US": "Mr",
+            "es-ES": "Sr"
           }
         },
         {
@@ -31,7 +32,8 @@
           "name": "Mrs",
           "key": "mrs",
           "name_i18n": {
-            "en-US": "Mrs"
+            "en-US": "Mrs",
+            "es-ES": "Sra"
           }
         },
         {
@@ -39,7 +41,8 @@
           "name": "Ms",
           "key": "ms",
           "name_i18n": {
-            "en-US": "Ms"
+            "en-US": "Ms",
+            "es-ES": "Srta"
           }
         },
         {
@@ -47,7 +50,8 @@
           "name": "Dr",
           "key": "dr",
           "name_i18n": {
-            "en-US": "Dr"
+            "en-US": "Dr",
+            "es-ES": "Dr"
           }
         },
         {
@@ -55,7 +59,8 @@
           "name": "Prof",
           "key": "prof",
           "name_i18n": {
-            "en-US": "Prof"
+            "en-US": "Prof",
+            "es-ES": "Prof"
           }
         },
         {
@@ -63,7 +68,8 @@
           "name": "Sir",
           "key": "sir",
           "name_i18n": {
-            "en-US": "Sir"
+            "en-US": "Sir",
+            "es-ES": "Sr"
           }
         },
         {
@@ -71,7 +77,8 @@
           "name": "Lady",
           "key": "lady",
           "name_i18n": {
-            "en-US": "Lady"
+            "en-US": "Dama",
+            "es-ES": "Sr"
           }
         },
         {
@@ -79,7 +86,8 @@
           "name": "Lord",
           "key": "lord",
           "name_i18n": {
-            "en-US": "Lord"
+            "en-US": "Lord",
+            "es-ES": "Señor"
           }
         }
       ]

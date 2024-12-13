@@ -22,28 +22,31 @@ export function FormTerms({ form, isMobile }) {
         {...mobileContainerProps}
         mobileSubSection={getMobileSubSection(SUBSECTION_KEYS.DOB)}
       >
-        <UkDateControlledInput
-          control={control}
-          inputProps={{
-            className: classNames('flex-grow-1 p-0 mb-4', {
-              'col-12 mb-4': isMobile,
-            }),
-          }}
-          label={t(SUBSECTION_KEYS.DOB)}
-          name={setFormPath('dob')}
-          rules={{
-            required: t('field-required'),
-            validate: {
-              minDate: (date) => {
-                return (
-                  moment(date, 'DD/MM/YYYY').isBefore(
-                    moment().subtract(13, 'years')
-                  ) || t('must-be-thirteen-or-over')
-                );
+        <div className="mb3">
+          <UkDateControlledInput
+            control={control}
+            inputProps={{
+              className: classNames('flex-grow-1 p-0 mb-4', {
+                'col-12 mb-4': isMobile,
+              }),
+            }}
+            label={t(SUBSECTION_KEYS.DOB)}
+            name={setFormPath('dob')}
+            rules={{
+              required: t('field-required'),
+              validate: {
+                minDate: (date) => {
+                  return (
+                    moment(date, 'DD/MM/YYYY').isBefore(
+                      moment().subtract(13, 'years')
+                    ) || t('must-be-thirteen-or-over')
+                  );
+                },
               },
-            },
-          }}
-        />
+            }}
+          />
+          <p className="mt-1 paragraph">{t('dob-hint')}</p>
+        </div>
       </MobileContainer>
 
       <MobileContainer
