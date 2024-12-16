@@ -1,9 +1,9 @@
 import moment from 'moment';
 
-const adaptToFormExampleRequest = (form) => ({
+const adaptToFormExampleRequest = (form, status) => ({
    address: form?.address?.address,
    city: form?.address?.city,
-   county: {
+   county: form?.address?.county && {
       key: form?.address?.county
    },
    dateOfBirth: form?.terms?.dob ? moment(form?.terms?.dob, 'DD/MM/YYYY').toISOString().split('T')[0] : undefined,
@@ -14,7 +14,9 @@ const adaptToFormExampleRequest = (form) => ({
    salutation: {
       key: form?.personal?.salutation
    },
-   surname: form?.personal?.surname
+   surname: form?.personal?.surname,
+   termsAcceptance: form?.terms?.acceptTerms,
+   status: status
 });
 
 export const LiferayAdapt = {

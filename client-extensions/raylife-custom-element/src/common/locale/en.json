@@ -145,6 +145,7 @@
       "acceptance-statement": "I accept the terms and conditions.",
       "terms-and-conditions": "Terms and Conditions",
       "acceptance-validation": "You must accept the terms and conditions.",
-      "example-object-disabled": "Example object is disabled"
+      "example-object-disabled": "Example object is disabled",
+      "uk-date-validation": "The date must be in DD/MM/YYYY format."
    }
 }

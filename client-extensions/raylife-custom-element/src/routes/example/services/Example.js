@@ -43,8 +43,8 @@ const updateExample = async (exampleId, payload = null) => {
 	});
 };
 
-export async function createOrUpdateExample(form) {
-	const payload = LiferayAdapt.adaptToFormExampleRequest(form);
+export async function createOrUpdateExample(form, status) {
+	const payload = LiferayAdapt.adaptToFormExampleRequest(form, status);
 	const exampleId = form?.personal?.exampleId;
 
 	if (exampleId) {

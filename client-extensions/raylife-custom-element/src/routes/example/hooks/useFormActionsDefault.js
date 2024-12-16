@@ -13,7 +13,7 @@ import { AppContext } from '../context/AppContextProvider';
 import { useStepWizard } from './useStepWizard';
 import { createOrUpdateExample } from '../services/Example';
 import { useTranslation } from 'react-i18next';
-import { OBJECT_MESSAGE } from '../utils/constants';
+import { OBJECT_MESSAGE, STATUS, AVAILABLE_STEPS } from '../utils/constants';
 
 /**
  *
@@ -76,7 +76,13 @@ const useFormActions = ({ form, nextSection, previousSection }) => {
   const onNext = useCallback(async () => {
     try {
       setError('serverValidation', null);
-      const response = await createOrUpdateExample(form);
+      let status = STATUS.DRAFT;
+
+      if (AVAILABLE_STEPS.TERMS.index === selectedStep.index) {
+        status = STATUS.APPROVED;
+      }
+
+      const response = await createOrUpdateExample(form, status);
 
       if (response) {
         setExampleId(response.data.id);
@@ -92,12 +98,29 @@ const useFormActions = ({ form, nextSection, previousSection }) => {
     } catch (e) {
       if (e.isAxiosError) {
         if (e?.response?.status === 400) {
-          setError('serverValidation', {
-            message: e.response?.data?.title || 'Unexepcted validation error',
-          });
+          debugger;
+          if (e.response?.data?.type === 'ObjectValidationRuleEngineException') {
+            let message = e.response?.data?.detail ? JSON.parse(e.response?.data?.detail) : undefined;
+            if (message && Array.isArray(message)) {
+              message = message[0]?.errorMessage;
+            } else {
+              message = 'Unexepcted validation error';
+            }
+            setError('serverValidation', {
+              message
+            });
+          } else {
+            setError('serverValidation', {
+              message: e.response?.data?.title || 'Unexepcted validation error',
+            });
+          }
         } else if (e?.response?.status === 403) {
           setError('exampleObject', {
             message: t(OBJECT_MESSAGE.EXAMPLE.DISABLED),
+          });
+        } else if (e?.response?.status === 404) {
+          setError('serverValidation', {
+            message: 'The form submission could not be found.',
           });
         } else {
           console.error(e);

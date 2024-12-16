@@ -145,6 +145,7 @@
       "acceptance-statement": "Acepto los términos y condiciones.",
       "terms-and-conditions": "Términos y condiciones",
       "acceptance-validation": "Debe aceptar los términos y condiciones.",
-      "example-object-disabled": "El objeto de ejemplo está deshabilitado"
+      "example-object-disabled": "El objeto de ejemplo está deshabilitado",
+      "uk-date-validation": "La fecha debe estar en formato DD/MM/AAAA."
    }
 }

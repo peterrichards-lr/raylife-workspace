@@ -92,3 +92,16 @@ export const OBJECT_MESSAGE = {
 		DISABLED: 'example-object-disabled',
 	},
 };
+
+export const STATUS = {
+  APPROVED: {
+    label_i18n: "Approved",
+    label: "approved",
+    code: 0
+  },
+  DRAFT: {
+    label_i18n: "Draft",
+    label: "draft",
+    code: 2
+  }
+}
